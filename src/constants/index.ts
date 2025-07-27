@@ -12,17 +12,17 @@ import {
   backend,
   creator,
   web,
-  javascript,
-  typescript,
-  html,
-  css,
-  reactjs,
-  redux,
-  tailwind,
-  nodejs,
-  mongodb,
+  gcp,
+  cloudflare,
+  aws,
+  azure,
+  heroku,
+  debian,
+  linux,
+  openstack,
+  nginx,
   git,
-  figma,
+  kubernetes,
   docker,
   rps,
   pgi,
@@ -31,7 +31,7 @@ import {
   carrent,
   jobit,
   tripguide,
-  threejs,
+  mongodb,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -70,52 +70,52 @@ const services: TService[] = [
 
 const technologies: TTechnology[] = [
   {
-    name: "HTML 5",
-    icon: html,
+    name: "AWS",
+    icon: aws,
   },
   {
-    name: "CSS 3",
-    icon: css,
+    name: "Azure",
+    icon: azure,
   },
   {
-    name: "JavaScript",
-    icon: javascript,
+    name: "GCP",
+    icon: gcp,
   },
   {
-    name: "TypeScript",
-    icon: typescript,
+    name: "Cloudflare",
+    icon: cloudflare,
   },
   {
-    name: "React JS",
-    icon: reactjs,
+    name: "Heroku",
+    icon: heroku,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
+    name: "Debian",
+    icon: debian,
   },
   {
-    name: "Tailwind CSS",
-    icon: tailwind,
+    name: "Linux",
+    icon: linux,
   },
   {
-    name: "Node JS",
-    icon: nodejs,
+    name: "OpenStack",
+    icon: openstack,
+  },
+  {
+    name: "nginx",
+    icon: nginx,
   },
   {
     name: "MongoDB",
     icon: mongodb,
   },
   {
-    name: "Three JS",
-    icon: threejs,
-  },
-  {
     name: "git",
     icon: git,
   },
   {
-    name: "figma",
-    icon: figma,
+    name: "Kubernetes",
+    icon: kubernetes,
   },
   {
     name: "docker",

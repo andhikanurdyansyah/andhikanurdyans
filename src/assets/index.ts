@@ -7,19 +7,19 @@ import github from "./github.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 
-import css from "./tech/css.png";
+import azure from "./tech/azure.png";
 import docker from "./tech/docker.png";
-import figma from "./tech/figma.png";
+import kubernetes from "./tech/kubernetes.png";
 import git from "./tech/git.png";
-import html from "./tech/html.png";
-import javascript from "./tech/javascript.png";
+import aws from "./tech/aws.png";
+import gcp from "./tech/gcp.png";
+import nginx from "./tech/nginx.png";
+import openstack from "./tech/openstack.png";
+import heroku from "./tech/heroku.png";
+import debian from "./tech/debian.png";
+import linux from "./tech/linux.png";
+import cloudflare from "./tech/cloudflare.png";
 import mongodb from "./tech/mongodb.png";
-import nodejs from "./tech/nodejs.png";
-import reactjs from "./tech/reactjs.png";
-import redux from "./tech/redux.png";
-import tailwind from "./tech/tailwind.png";
-import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
 
 import rps from "./company/rps.png";
 import mizuho from "./company/mizuho.png";
@@ -39,19 +39,19 @@ export {
   github,
   menu,
   close,
-  css,
+  azure,
   docker,
-  figma,
+  kubernetes,
   git,
-  html,
-  javascript,
+  aws,
+  gcp,
+  nginx,
+  openstack,
+  heroku,
+  debian,
+  linux,
+  cloudflare,
   mongodb,
-  nodejs,
-  reactjs,
-  redux,
-  tailwind,
-  typescript,
-  threejs,
   rps,
   mizuho,
   pgi,
