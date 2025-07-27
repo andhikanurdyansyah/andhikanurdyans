@@ -24,10 +24,10 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
+  rps,
+  pgi,
+  diagnos,
+  mizuho,
   carrent,
   jobit,
   tripguide,
@@ -127,7 +127,7 @@ const experiences: TExperience[] = [
   {
     title: "Project Manager",
     companyName: "PT. Platinumetrix Global Inovasi",
-    icon: starbucks,
+    icon: pgi,
     iconBg: "#383E56",
     date: "July 2022 - Present",
     points: [
@@ -140,20 +140,7 @@ const experiences: TExperience[] = [
   {
     title: "Supervisor IT Infrastructure & Support",
     companyName: "PT. Diagnos Laboratorium Utama .Tbk",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Jan 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Supervisor IT Infrastructure & Support",
-    companyName: "PT. Diagnos Laboratorium Utama .Tbk",
-    icon: tesla,
+    icon: diagnos,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Jan 2022",
     points: [
@@ -166,7 +153,7 @@ const experiences: TExperience[] = [
   {
     title: "IT Infrastructure Specialist",
     companyName: "PT. Mizuho Balimor Finance",
-    icon: shopify,
+    icon: mizuho,
     iconBg: "#383E56",
     date: "Feb 2020 - Jan 2021",
     points: [
@@ -179,7 +166,7 @@ const experiences: TExperience[] = [
   {
     title: "IT Professional Service Engineer",
     companyName: "PT. Retail Performance Solution",
-    icon: meta,
+    icon: rps,
     iconBg: "#E6DEDD",
     date: "Jun 2019 - Jan 2020",
     points: [
