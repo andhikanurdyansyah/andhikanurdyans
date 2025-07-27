@@ -51,19 +51,19 @@ export const navLinks: TNavLink[] = [
 
 const services: TService[] = [
   {
-    title: "Web Developer",
+    title: "Project Management",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "DevOps",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Network & Security",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Cloud Infra-Architecture",
     icon: creator,
   },
 ];
@@ -125,11 +125,11 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: "React.js Developer",
-    companyName: "Starbucks",
+    title: "Project Manager",
+    companyName: "PT. Platinumetrix Global Inovasi",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "July 2022 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -138,11 +138,11 @@ const experiences: TExperience[] = [
     ],
   },
   {
-    title: "React Native Developer",
-    companyName: "Tesla",
+    title: "Supervisor IT Infrastructure & Support",
+    companyName: "PT. Diagnos Laboratorium Utama .Tbk",
     icon: tesla,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Jan 2021 - Jan 2022",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -151,11 +151,24 @@ const experiences: TExperience[] = [
     ],
   },
   {
-    title: "Web Developer",
-    companyName: "Shopify",
+    title: "Supervisor IT Infrastructure & Support",
+    companyName: "PT. Diagnos Laboratorium Utama .Tbk",
+    icon: tesla,
+    iconBg: "#E6DEDD",
+    date: "Jan 2021 - Jan 2022",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
+    ],
+  },
+  {
+    title: "IT Infrastructure Specialist",
+    companyName: "PT. Mizuho Balimor Finance",
     icon: shopify,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "Feb 2020 - Jan 2021",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -164,11 +177,11 @@ const experiences: TExperience[] = [
     ],
   },
   {
-    title: "Full stack Developer",
-    companyName: "Meta",
+    title: "IT Professional Service Engineer",
+    companyName: "PT. Retail Performance Solution",
     icon: meta,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "Jun 2019 - Jan 2020",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",

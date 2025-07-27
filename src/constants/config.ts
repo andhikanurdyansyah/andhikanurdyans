@@ -67,8 +67,8 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `Crafting resilient solutions across DevOps, Network Security, and Cloud-Native systems. I thrive on solving
-      complex tech puzzles, optimizing infrastructure, and building secure, scalable platforms. Always learning,
+      content: `Crafting resilient solutions across DevOps, Network Security, and Cloud-Native systems. 
+      I thrive on solving complex tech puzzles, optimizing infrastructure, and building secure, scalable platforms. Always learning,
       always improving—engineering with purpose!.`,
     },
     experience: {
