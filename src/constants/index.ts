@@ -28,7 +28,7 @@ import {
   pgi,
   rml,
   infracom,
-  super,
+  superprint,
   telkom,
   diagnos,
   mizuho,
@@ -216,7 +216,7 @@ const experiences: TExperience[] = [
     title: "IT Engineer",
     companyName: "CV. Super Print",
     companyUrl: "http://www.superprintbekasi.com/",
-    icon: super,
+    icon: superprint,
     iconBg: "#E6DEDD",
     date: "Jun 2019 - Jan 2020",
     points: [

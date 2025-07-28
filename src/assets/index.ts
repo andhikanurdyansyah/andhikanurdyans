@@ -27,7 +27,7 @@ import pgi from "./company/pgi.png";
 import diagnos from "./company/diagnos.png";
 import infracom from "./company/infracom.png";
 import rml from "./company/rml.png";
-import super from "./company/super.png";
+import superprint from "./company/superprint.png";
 import telkom from "./company/telkom.png";
 
 import carrent from "./carrent.png";
@@ -61,7 +61,7 @@ export {
   pgi,
   infracom,
   rml,
-  super,
+  superprint,
   telkom,
   diagnos,
   carrent,
