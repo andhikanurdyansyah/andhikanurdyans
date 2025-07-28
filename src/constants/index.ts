@@ -17,10 +17,10 @@ import {
   aws,
   azure,
   heroku,
-  debian,
+  nodejs,
   linux,
   openstack,
-  nginx,
+  reactjs,
   git,
   kubernetes,
   docker,
@@ -90,8 +90,8 @@ const technologies: TTechnology[] = [
     icon: heroku,
   },
   {
-    name: "Debian",
-    icon: debian,
+    name: "nodejs",
+    icon: nodejs,
   },
   {
     name: "Linux",
@@ -102,8 +102,8 @@ const technologies: TTechnology[] = [
     icon: openstack,
   },
   {
-    name: "nginx",
-    icon: nginx,
+    name: "reactjs",
+    icon: reactjs,
   },
   {
     name: "MongoDB",
@@ -127,6 +127,7 @@ const experiences: TExperience[] = [
   {
     title: "Project Manager",
     companyName: "PT. Platinumetrix Global Inovasi",
+    companyUrl: "https://pgi-data.co.id",
     icon: pgi,
     iconBg: "#383E56",
     date: "July 2022 - Present",
@@ -154,7 +155,7 @@ const experiences: TExperience[] = [
     title: "IT Infrastructure Specialist",
     companyName: "PT. Mizuho Balimor Finance",
     icon: mizuho,
-    iconBg: "#383E56",
+    iconBg: "#E6DEDD",
     date: "Feb 2020 - Jan 2021",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",

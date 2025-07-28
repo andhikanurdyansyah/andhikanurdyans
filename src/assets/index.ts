@@ -13,10 +13,10 @@ import kubernetes from "./tech/kubernetes.png";
 import git from "./tech/git.png";
 import aws from "./tech/aws.png";
 import gcp from "./tech/gcp.png";
-import nginx from "./tech/nginx.png";
+import reactjs from "./tech/reactjs.png";
 import openstack from "./tech/openstack.png";
 import heroku from "./tech/heroku.png";
-import debian from "./tech/debian.png";
+import nodejs from "./tech/nodejs.png";
 import linux from "./tech/linux.png";
 import cloudflare from "./tech/cloudflare.png";
 import mongodb from "./tech/mongodb.png";
@@ -45,10 +45,10 @@ export {
   git,
   aws,
   gcp,
-  nginx,
+  reactjs,
   openstack,
   heroku,
-  debian,
+  nodejs,
   linux,
   cloudflare,
   mongodb,
