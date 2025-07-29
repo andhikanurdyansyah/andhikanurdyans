@@ -17,7 +17,7 @@ import reactjs from "./tech/reactjs.png";
 import openstack from "./tech/openstack.png";
 import heroku from "./tech/heroku.png";
 import nodejs from "./tech/nodejs.png";
-import linux from "./tech/linux.png";
+import python from "./tech/python.png";
 import cloudflare from "./tech/cloudflare.png";
 import mongodb from "./tech/mongodb.png";
 
@@ -53,7 +53,7 @@ export {
   openstack,
   heroku,
   nodejs,
-  linux,
+  python,
   cloudflare,
   mongodb,
   rps,

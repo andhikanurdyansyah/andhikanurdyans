@@ -18,7 +18,7 @@ import {
   azure,
   heroku,
   nodejs,
-  linux,
+  python,
   openstack,
   reactjs,
   git,
@@ -98,8 +98,8 @@ const technologies: TTechnology[] = [
     icon: nodejs,
   },
   {
-    name: "Linux",
-    icon: linux,
+    name: "python",
+    icon: python,
   },
   {
     name: "OpenStack",
