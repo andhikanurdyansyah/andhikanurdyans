@@ -114,7 +114,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="animate-pulse inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#7F00FF] to-[#E100FF] px-6 py-3 font-bold text-white shadow-lg transition-all duration-300 hover:scale-105"
             >
-              <span>⬇️ Download CV</span>
+              <span>Download CV</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
