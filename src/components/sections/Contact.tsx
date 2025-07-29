@@ -53,12 +53,10 @@ const Contact = () => {
         () => {
           setLoading(false);
           alert("Thank you. I will get back to you as soon as possible.");
-
           setForm(INITIAL_STATE);
         },
         (error) => {
           setLoading(false);
-
           console.log(error);
           alert("Something went wrong.");
         }
@@ -101,12 +99,37 @@ const Contact = () => {
               </label>
             );
           })}
+
           <button
             type="submit"
             className="bg-tertiary shadow-primary w-fit rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none"
           >
             {loading ? "Sending..." : "Send"}
           </button>
+
+          {/* Tambahan Tombol Download CV */}
+          <a
+            href="https://drive.google.com/file/d/1otHMTcDRsM4AxoPi4XqMn2_2SEivh_J6/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group mt-4 inline-flex w-fit items-center gap-3 rounded-xl bg-gradient-to-r from-[#7F00FF] to-[#E100FF] px-8 py-3 font-bold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:brightness-110"
+          >
+            <span className="text-lg">📄 Download CV</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 13l-5 5m0 0l-5-5m5 5V6"
+              />
+            </svg>
+          </a>
         </form>
       </motion.div>
 
