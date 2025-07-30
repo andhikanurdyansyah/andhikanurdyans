@@ -43,20 +43,3 @@ export type TMotion = {
   delay: number;
   duration: number;
 };
-
-// Tambahan untuk Education & Certification
-export type TEducation = {
-  name: string;
-  description: string;
-  tags: { name: string; color: string }[];
-  icon: string;
-  iconBg: string;
-  date: string;
-};
-
-export type TCertification = {
-  name: string;
-  company: string;
-  image: string;
-  link: string;
-};
