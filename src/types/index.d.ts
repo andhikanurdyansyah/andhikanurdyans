@@ -12,6 +12,23 @@ export type TExperience = {
   points: string[];
 } & Required<Omit<TCommonProps, "name">>;
 
+export type TTestimonial = {
+  testimonial: string;
+  designation: string;
+  company: string;
+  image: string;
+} & Required<Pick<TCommonProps, "name">>;
+
+export type TProject = {
+  description: string;
+  tags: {
+    name: string;
+    color: string;
+  }[];
+  image: string;
+  sourceCodeLink: string;
+} & Required<Pick<TCommonProps, "name">>;
+
 export type TTechnology = Required<Omit<TCommonProps, "title">>;
 
 export type TNavLink = {
@@ -25,22 +42,4 @@ export type TMotion = {
   type: "tween" | "spring" | "just" | "";
   delay: number;
   duration: number;
-};
-
-// === Tambahan Baru ===
-
-export type TEducation = {
-  name: string;
-  description: string;
-  tags: { name: string; color: string }[];
-  icon: string;
-  iconBg: string;
-  date: string;
-};
-
-export type TCertification = {
-  name: string;
-  company: string;
-  image: string;
-  link: string;
 };

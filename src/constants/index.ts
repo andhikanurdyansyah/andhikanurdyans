@@ -3,8 +3,8 @@ import type {
   TService,
   TTechnology,
   TExperience,
-  TEducation,
-  TCertification,
+  TTestimonial,
+  TProject,
 } from "../types";
 
 import {
@@ -32,36 +32,99 @@ import {
   telkom,
   diagnos,
   mizuho,
+  carrent,
+  jobit,
+  tripguide,
+  mongodb,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
-  { id: "about", title: "About" },
-  { id: "work", title: "Work" },
-  { id: "education", title: "Education" },
-  { id: "certifications", title: "Certifications" },
-  { id: "contact", title: "Contact" },
+  {
+    id: "about",
+    title: "About",
+  },
+  {
+    id: "work",
+    title: "Work",
+  },
+  {
+    id: "contact",
+    title: "Contact",
+  },
 ];
 
 const services: TService[] = [
-  { title: "Project Management", icon: web },
-  { title: "DevOps", icon: mobile },
-  { title: "Network & Security", icon: backend },
-  { title: "Cloud Infra-Architecture", icon: creator },
+  {
+    title: "Project Management",
+    icon: web,
+  },
+  {
+    title: "DevOps",
+    icon: mobile,
+  },
+  {
+    title: "Network & Security",
+    icon: backend,
+  },
+  {
+    title: "Cloud Infra-Architecture",
+    icon: creator,
+  },
 ];
 
 const technologies: TTechnology[] = [
-  { name: "AWS", icon: aws },
-  { name: "Azure", icon: azure },
-  { name: "GCP", icon: gcp },
-  { name: "Cloudflare", icon: cloudflare },
-  { name: "Heroku", icon: heroku },
-  { name: "nodejs", icon: nodejs },
-  { name: "python", icon: python },
-  { name: "OpenStack", icon: openstack },
-  { name: "reactjs", icon: reactjs },
-  { name: "git", icon: git },
-  { name: "Kubernetes", icon: kubernetes },
-  { name: "docker", icon: docker },
+  {
+    name: "AWS",
+    icon: aws,
+  },
+  {
+    name: "Azure",
+    icon: azure,
+  },
+  {
+    name: "GCP",
+    icon: gcp,
+  },
+  {
+    name: "Cloudflare",
+    icon: cloudflare,
+  },
+  {
+    name: "Heroku",
+    icon: heroku,
+  },
+  {
+    name: "nodejs",
+    icon: nodejs,
+  },
+  {
+    name: "python",
+    icon: python,
+  },
+  {
+    name: "OpenStack",
+    icon: openstack,
+  },
+  {
+    name: "reactjs",
+    icon: reactjs,
+  },
+  {
+    name: "MongoDB",
+    icon: mongodb,
+  },
+  {
+    name: "git",
+    icon: git,
+  },
+  {
+    name: "Kubernetes",
+    icon: kubernetes,
+  },
+  {
+    name: "docker",
+    icon: docker,
+  },
 ];
 
 const experiences: TExperience[] = [
@@ -73,10 +136,10 @@ const experiences: TExperience[] = [
     iconBg: "#383E56",
     date: "July 2022 - Present",
     points: [
-      "Developing and maintaining web applications...",
-      "Collaborating with cross-functional teams...",
-      "Implementing responsive design...",
-      "Participating in code reviews...",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
@@ -87,10 +150,10 @@ const experiences: TExperience[] = [
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Jan 2022",
     points: [
-      "Developing and maintaining web applications...",
-      "Collaborating with cross-functional teams...",
-      "Implementing responsive design...",
-      "Participating in code reviews...",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
@@ -101,10 +164,10 @@ const experiences: TExperience[] = [
     iconBg: "#E6DEDD",
     date: "Feb 2020 - Jan 2021",
     points: [
-      "Developing and maintaining web applications...",
-      "Collaborating with cross-functional teams...",
-      "Implementing responsive design...",
-      "Participating in code reviews...",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
@@ -115,13 +178,13 @@ const experiences: TExperience[] = [
     iconBg: "#E6DEDD",
     date: "Jun 2019 - Jan 2020",
     points: [
-      "Developing and maintaining web applications...",
-      "Collaborating with cross-functional teams...",
-      "Implementing responsive design...",
-      "Participating in code reviews...",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
-  {
+    {
     title: "IT Support Engineer",
     companyName: "PT. Raditya Mulia Lestari",
     companyUrl: "https://rml.co.id/",
@@ -129,10 +192,10 @@ const experiences: TExperience[] = [
     iconBg: "#E6DEDD",
     date: "Jun 2019 - Jan 2020",
     points: [
-      "Developing and maintaining web applications...",
-      "Collaborating with cross-functional teams...",
-      "Implementing responsive design...",
-      "Participating in code reviews...",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
@@ -143,10 +206,10 @@ const experiences: TExperience[] = [
     iconBg: "#E6DEDD",
     date: "Jun 2019 - Jan 2020",
     points: [
-      "Developing and maintaining web applications...",
-      "Collaborating with cross-functional teams...",
-      "Implementing responsive design...",
-      "Participating in code reviews...",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
@@ -157,10 +220,10 @@ const experiences: TExperience[] = [
     iconBg: "#E6DEDD",
     date: "Jun 2019 - Jan 2020",
     points: [
-      "Developing and maintaining web applications...",
-      "Collaborating with cross-functional teams...",
-      "Implementing responsive design...",
-      "Participating in code reviews...",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
   {
@@ -171,47 +234,105 @@ const experiences: TExperience[] = [
     iconBg: "#E6DEDD",
     date: "Jun 2019 - Jan 2020",
     points: [
-      "Developing and maintaining web applications...",
-      "Collaborating with cross-functional teams...",
-      "Implementing responsive design...",
-      "Participating in code reviews...",
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
 ];
 
-const educations: TEducation[] = [
+const testimonials: TTestimonial[] = [
   {
-    name: "Universitas Terbuka",
-    description: "S1 Sistem Informasi — fokus pada cloud dan data",
+    testimonial:
+      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+    name: "Sara Lee",
+    designation: "CFO",
+    company: "Acme Co",
+    image: "https://randomuser.me/api/portraits/women/4.jpg",
+  },
+  {
+    testimonial:
+      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+    name: "Chris Brown",
+    designation: "COO",
+    company: "DEF Corp",
+    image: "https://randomuser.me/api/portraits/men/5.jpg",
+  },
+  {
+    testimonial:
+      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "Lisa Wang",
+    designation: "CTO",
+    company: "456 Enterprises",
+    image: "https://randomuser.me/api/portraits/women/6.jpg",
+  },
+];
+
+const projects: TProject[] = [
+  {
+    name: "Car Rent",
+    description:
+      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
-      { name: "Cloud", color: "green-text-gradient" },
-      { name: "Data Analytics", color: "blue-text-gradient" },
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
     ],
-    icon: web,
-    iconBg: "#E6DEDD",
-    date: "2020 - Sekarang",
+    image: carrent,
+    sourceCodeLink: "https://github.com/",
+  },
+  {
+    name: "Job IT",
+    description:
+      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "restapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: jobit,
+    sourceCodeLink: "https://github.com/",
+  },
+  {
+    name: "Trip Guide",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: [
+      {
+        name: "nextjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "supabase",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: tripguide,
+    sourceCodeLink: "https://github.com/",
   },
 ];
 
-const certifications: TCertification[] = [
-  {
-    name: "Google Cloud Digital Leader",
-    company: "Google",
-    image: "https://drive.google.com/thumbnail?id=dummyid1",
-    link: "https://drive.google.com/file/d/dummyid1/view",
-  },
-  {
-    name: "AWS Certified Cloud Practitioner",
-    company: "Amazon",
-    image: "https://drive.google.com/thumbnail?id=dummyid2",
-    link: "https://drive.google.com/file/d/dummyid2/view",
-  },
-];
-
-export {
-  services,
-  technologies,
-  experiences,
-  educations,
-  certifications,
-};
+export { services, technologies, experiences, testimonials, projects };
