@@ -72,7 +72,7 @@ const Certification: React.FC = () => {
             display: inline-flex;
             gap: 1rem;
             width: max-content;
-            animation: scrollX 30s linear infinite;
+            animation: scrollX 50s linear infinite;
             will-change: transform;
           }
           .marquee-container:hover .marquee-track {

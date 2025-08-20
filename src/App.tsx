@@ -6,13 +6,15 @@ import {
   About,
   Contact,
   Experience,
-  Education,       // NEW
-  Certification,   // NEW
+  Education,
   Hero,
   Navbar,
   Tech,
   StarsCanvas,
 } from "./components";
+
+// gunakan section marquee yang baru
+import CertificationSection from "./components/sections/CertificationSection";
 
 const App = () => {
   useEffect(() => {
@@ -33,9 +35,9 @@ const App = () => {
         <Experience />
         <Tech />
 
-        {/* NEW sections */}
+        {/* Sections baru */}
         <Education />
-        <Certification />
+        <CertificationSection />
 
         <div className="relative z-0">
           <Contact />
