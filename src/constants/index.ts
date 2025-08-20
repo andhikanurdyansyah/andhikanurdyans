@@ -7,6 +7,12 @@ import type {
   TCertification,
 } from "../types";
 
+// ...import lain
+import tamhar from "../assets/edu/tamhar.png";
+import udemy from "../assets/edu/udemy.png";
+import sololearn from "../assets/edu/sololearn.png";
+import sololearn from "../assets/edu/ut.png";
+
 import {
   mobile, backend, creator, web,
   gcp, cloudflare, aws, azure, heroku,
@@ -155,7 +161,6 @@ const educations: TEducation[] = [
       "Focus on Data Analysis and Information Systems.",
       "Coursework includes Data Visualization, Systems Analysis, and Cloud Computing.",
     ],
-    // kalau tidak punya asset lokal, boleh pakai URL eksternal sementara
     image: "https://placehold.co/600x400?text=Universitas+Terbuka",
     linkUrl: "https://www.ut.ac.id/",
     linkLabel: "Visit UT",
@@ -164,7 +169,33 @@ const educations: TEducation[] = [
       { name: "cloud", color: "green-text-gradient" },
     ],
   },
-  // tambah item lain kalau ada
+  {
+    title: "Computer & Network Engineering",
+    institution: "Islamic School Vocational High School of Taman Harapan",
+    period: "Graduated",
+    image: tamhar,
+    linkUrl: "https://online.tamhar.sch.id/",
+    linkLabel: "Visit Tamhar",
+    tags: [{ name: "networking", color: "green-text-gradient" }],
+  },
+  {
+    title: "Online Courses",
+    institution: "Udemy",
+    period: "Ongoing",
+    image: udemy,
+    linkUrl: "https://www.udemy.com/user/andhika-nurdyansyah/",
+    linkLabel: "View Profile",
+    tags: [{ name: "self-learning", color: "pink-text-gradient" }],
+  },
+  {
+    title: "Online Courses",
+    institution: "SoloLearn",
+    period: "Ongoing",
+    image: sololearn,
+    linkUrl: "https://www.sololearn.com/profile/12164800",
+    linkLabel: "View Profile",
+    tags: [{ name: "self-learning", color: "blue-text-gradient" }],
+  },
 ];
 
 const certifications: TCertification[] = [
