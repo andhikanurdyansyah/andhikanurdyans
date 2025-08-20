@@ -6,16 +6,13 @@ import {
   About,
   Contact,
   Experience,
-  CertificationSection,
   Education,
   Hero,
   Navbar,
   Tech,
   StarsCanvas,
+  CertificationSection, // ← from barrel
 } from "./components";
-
-// gunakan section marquee yang baru
-import CertificationSection from "./components/sections/CertificationSection";
 
 const App = () => {
   useEffect(() => {
@@ -36,7 +33,6 @@ const App = () => {
         <Experience />
         <Tech />
 
-        {/* Sections baru */}
         <Education />
         <CertificationSection />
 
