@@ -195,12 +195,16 @@ const certifications: TCertification[] = [
     date: "2024-06",
     credentialUrl: "https://link-sertifikat-aws.com",
     credentialId: "ABC-1234",
+    image: "https://placehold.co/600x400?text=AWS+CCP",     // NEW
+    linkLabel: "View Credential",                           // NEW
   },
   {
     name: "Kubernetes and Cloud Native Associate (KCNA)",
     issuer: "CNCF",
     date: "2023-12",
     credentialUrl: "https://link-sertifikat-kcna.com",
+    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    linkLabel: "View Credential",
   },
 ];
 

@@ -37,6 +37,10 @@ export type TCertification = {
   date?: string;
   credentialUrl?: string;
   credentialId?: string;
+
+  // NEW – biar mirip Education card
+  image?: string;        // logo/banner sertifikat
+  linkLabel?: string;    // label tombol (default: "View Credential")
 };
 
 /** ===== LEGACY (boleh dihapus setelah migrasi) ===== */
