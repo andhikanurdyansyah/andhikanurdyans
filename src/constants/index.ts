@@ -1,4 +1,3 @@
-// src/constants/index.ts
 import type {
   TNavLink,
   TService,
@@ -9,37 +8,17 @@ import type {
 } from "../types";
 
 import {
-  mobile,
-  backend,
-  creator,
-  web,
-  gcp,
-  cloudflare,
-  aws,
-  azure,
-  heroku,
-  nodejs,
-  python,
-  openstack,
-  reactjs,
-  git,
-  kubernetes,
-  docker,
-  rps,
-  pgi,
-  rml,
-  infracom,
-  superprint,
-  telkom,
-  diagnos,
-  mizuho,
+  mobile, backend, creator, web,
+  gcp, cloudflare, aws, azure, heroku,
+  nodejs, python, openstack, reactjs, git, kubernetes, docker,
+  rps, pgi, rml, infracom, superprint, telkom, diagnos, mizuho,
   mongodb,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
   { id: "about", title: "About" },
-  { id: "education", title: "Education" },       // was "work"
-  { id: "certification", title: "Certification" }, // new
+  { id: "education", title: "Education" },        // was Work
+  { id: "certification", title: "Certification" },// new
   { id: "contact", title: "Contact" },
 ];
 
@@ -71,9 +50,7 @@ const experiences: TExperience[] = [
     title: "Project Manager",
     companyName: "PT. Platinumetrix Global Inovasi",
     companyUrl: "https://pgi-data.co.id",
-    icon: pgi,
-    iconBg: "#383E56",
-    date: "July 2022 - Present",
+    icon: pgi, iconBg: "#383E56", date: "July 2022 - Present",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -85,9 +62,7 @@ const experiences: TExperience[] = [
     title: "Supervisor IT Infrastructure & Support",
     companyName: "PT. Diagnos Laboratorium Utama .Tbk",
     companyUrl: "https://diagnos.co.id/",
-    icon: diagnos,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Jan 2022",
+    icon: diagnos, iconBg: "#E6DEDD", date: "Jan 2021 - Jan 2022",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -99,9 +74,7 @@ const experiences: TExperience[] = [
     title: "IT Infrastructure Specialist",
     companyName: "PT. Mizuho Balimor Finance",
     companyUrl: "https://www.obf.id/",
-    icon: mizuho,
-    iconBg: "#E6DEDD",
-    date: "Feb 2020 - Jan 2021",
+    icon: mizuho, iconBg: "#E6DEDD", date: "Feb 2020 - Jan 2021",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -113,9 +86,7 @@ const experiences: TExperience[] = [
     title: "IT Professional Service Engineer",
     companyName: "PT. Retail Performance Solution",
     companyUrl: "https://rps-indonesia.co.id/",
-    icon: rps,
-    iconBg: "#E6DEDD",
-    date: "Jun 2019 - Jan 2020",
+    icon: rps, iconBg: "#E6DEDD", date: "Jun 2019 - Jan 2020",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -127,9 +98,7 @@ const experiences: TExperience[] = [
     title: "IT Support Engineer",
     companyName: "PT. Raditya Mulia Lestari",
     companyUrl: "https://rml.co.id/",
-    icon: rml,
-    iconBg: "#E6DEDD",
-    date: "Jun 2019 - Jan 2020",
+    icon: rml, iconBg: "#E6DEDD", date: "Jun 2019 - Jan 2020",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -140,11 +109,8 @@ const experiences: TExperience[] = [
   {
     title: "Data Center Operation",
     companyName: "PT. Infracom Telesarana",
-    companyUrl:
-      "https://www.linkedin.com/company/pt-infracom-telesarana/about/",
-    icon: infracom,
-    iconBg: "#E6DEDD",
-    date: "Jun 2019 - Jan 2020",
+    companyUrl: "https://www.linkedin.com/company/pt-infracom-telesarana/about/",
+    icon: infracom, iconBg: "#E6DEDD", date: "Jun 2019 - Jan 2020",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -156,9 +122,7 @@ const experiences: TExperience[] = [
     title: "IT Engineer",
     companyName: "CV. Super Print",
     companyUrl: "http://www.superprintbekasi.com/",
-    icon: superprint,
-    iconBg: "#E6DEDD",
-    date: "Jun 2019 - Jan 2020",
+    icon: superprint, iconBg: "#E6DEDD", date: "Jun 2019 - Jan 2020",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -170,9 +134,7 @@ const experiences: TExperience[] = [
     title: "Network Engineer (Freelancer)",
     companyName: "PT. Telkom Akses",
     companyUrl: "https://telkomakses.co.id/",
-    icon: telkom,
-    iconBg: "#E6DEDD",
-    date: "Jun 2019 - Jan 2020",
+    icon: telkom, iconBg: "#E6DEDD", date: "Jun 2019 - Jan 2020",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -182,7 +144,7 @@ const experiences: TExperience[] = [
   },
 ];
 
-// ===== NEW: Education & Certification =====
+/** ===== NEW DATA ===== */
 const educations: TEducation[] = [
   {
     degree: "Bachelor of Computer Science",
@@ -194,7 +156,6 @@ const educations: TEducation[] = [
       "Coursework includes Data Visualization, Systems Analysis, and Cloud Computing.",
     ],
   },
-  // tambahkan item lain sesuai kebutuhan
 ];
 
 const certifications: TCertification[] = [
@@ -202,7 +163,7 @@ const certifications: TCertification[] = [
     name: "AWS Certified Cloud Practitioner",
     issuer: "Amazon Web Services",
     date: "2024-06",
-    credentialUrl: "https://link-sertifikat-aws.com", // bisa Google Drive
+    credentialUrl: "https://link-sertifikat-aws.com",
     credentialId: "ABC-1234",
   },
   {

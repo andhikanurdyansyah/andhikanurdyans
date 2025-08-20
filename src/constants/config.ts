@@ -33,8 +33,8 @@ type TConfig = {
   sections: {
     about: Required<TSection>;
     experience: TSection;
-    feedbacks: TSection;
-    works: Required<TSection>;
+    education: Required<TSection>;      // renamed from works
+    certification: Required<TSection>;  // renamed from feedbacks
   };
 };
 
@@ -46,7 +46,9 @@ export const config: TConfig = {
   },
   hero: {
     name: "Andhika Nurdyansyah",
-    p: ["Sr Technical Consultant | DevOps | Network & Security | Cloud-Native Solutions | Passionate Tech Problem Solver"],
+    p: [
+      "Sr Technical Consultant | DevOps | Network & Security | Cloud-Native Solutions | Passionate Tech Problem Solver",
+    ],
   },
   contact: {
     p: "Get in touch",
@@ -75,18 +77,15 @@ export const config: TConfig = {
       p: "What I have done so far",
       h2: "Work Experience.",
     },
-    feedbacks: {
-      p: "What others say",
-      h2: "Testimonials.",
+    education: {
+      p: "Where I studied",
+      h2: "Education.",
+      content: `Formal education and academic journey, highlighting coursework and focus areas.`,
     },
-    works: {
-      p: "My work",
-      h2: "Projects.",
-      content: `Following projects showcases my skills and experience through
-    real-world examples of my work. Each project is briefly described with
-    links to code repositories and live demos in it. It reflects my
-    ability to solve complex problems, work with different technologies,
-    and manage projects effectively.`,
+    certification: {
+      p: "Professional proof",
+      h2: "Certifications.",
+      content: `Professional certifications and credentials that validate my expertise in cloud, DevOps, and technology.`,
     },
   },
 };

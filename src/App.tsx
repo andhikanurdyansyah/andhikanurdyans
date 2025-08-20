@@ -1,18 +1,18 @@
 import { BrowserRouter } from "react-router-dom";
+import { useEffect } from "react";
+import { config } from "./constants/config";
 
 import {
   About,
   Contact,
   Experience,
-  Feedbacks,
+  Education,       // NEW
+  Certification,   // NEW
   Hero,
   Navbar,
   Tech,
-  Works,
   StarsCanvas,
 } from "./components";
-import { useEffect } from "react";
-import { config } from "./constants/config";
 
 const App = () => {
   useEffect(() => {
@@ -28,11 +28,15 @@ const App = () => {
           <Navbar />
           <Hero />
         </div>
+
         <About />
         <Experience />
         <Tech />
-        <Works />
-        <Feedbacks />
+
+        {/* NEW sections */}
+        <Education />
+        <Certification />
+
         <div className="relative z-0">
           <Contact />
           <StarsCanvas />

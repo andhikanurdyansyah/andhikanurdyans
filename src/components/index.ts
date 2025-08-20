@@ -5,13 +5,17 @@ import {
   ComputersCanvas,
   StarsCanvas,
 } from "./canvas";
+
 import Hero from "./sections/Hero";
 import Navbar from "./layout/Navbar";
 import About from "./sections/About";
 import Tech from "./sections/Tech";
 import Experience from "./sections/Experience";
-import Works from "./sections/Works";
-import Feedbacks from "./sections/Feedbacks";
+
+// NEW: ganti Works & Feedbacks
+import Education from "./sections/Education";
+import Certification from "./sections/Certification";
+
 import Contact from "./sections/Contact";
 import CanvasLoader from "./layout/Loader";
 
@@ -21,8 +25,8 @@ export {
   About,
   Tech,
   Experience,
-  Works,
-  Feedbacks,
+  Education,      // NEW
+  Certification,  // NEW
   Contact,
   CanvasLoader,
   EarthCanvas,
