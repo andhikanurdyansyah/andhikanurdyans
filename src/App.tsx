@@ -6,6 +6,7 @@ import {
   About,
   Contact,
   Experience,
+  CertificationSection,
   Education,
   Hero,
   Navbar,
