@@ -1,28 +1,22 @@
-import { motion } from "framer-motion";
-import { SectionWrapper } from "../../hoc";
 import { certifications } from "../../constants";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
+import { SectionWrapper } from "../../hoc";
 import type { TCertification } from "../../types";
 
-// ikon link kecil (tanpa dependency tambahan)
+// Ikon link kecil (tanpa dependency)
 const LinkIcon = () => (
   <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
-    <path d="M10.59 13.41a1 1 0 0 1 0-1.41l3-3a1 1 0 1 1 1.41 1.41l-3 3a1 1 0 0 1-1.41 0z"></path>
-    <path d="M13 7h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-4a1 1 0 1 1 2 0v4h8V9h-4a1 1 0 1 1 0-2z"></path>
+    <path d="M10.59 13.41a1 1 0 0 1 0-1.41l3-3a1 1 0 1 1 1.41 1.41l-3 3a1 1 0 0 1-1.41 0z" />
+    <path d="M13 7h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-4a1 1 0 1 1 2 0v4h8V9h-4a1 1 0 1 1 0-2z" />
   </svg>
 );
 
-const CertCard: React.FC<{ cert: TCertification; i: number }> = ({ cert, i }) => (
-  <motion.article
-    initial={{ opacity: 0, y: 12 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, amount: 0.2 }}
-    transition={{ delay: i * 0.06, duration: 0.35, ease: "easeOut" }}
-    whileHover={{ scale: 1.04, y: -6, rotateZ: -0.3 }}
-    whileTap={{ scale: 0.99 }}
-    className="group rounded-2xl bg-tertiary p-5 ring-1 ring-white/10 shadow-sm
-               transition-shadow duration-300 ease-out hover:shadow-xl hover:shadow-indigo-500/20"
+const CertCard: React.FC<{ cert: TCertification }> = ({ cert }) => (
+  <article
+    className="group w-[280px] shrink-0 rounded-2xl bg-tertiary p-5
+               ring-1 ring-white/10 shadow-sm transition-all duration-500 ease-out
+               hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/20"
   >
     {/* Gambar */}
     <div className="relative h-[160px] w-full overflow-hidden rounded-xl">
@@ -33,7 +27,7 @@ const CertCard: React.FC<{ cert: TCertification; i: number }> = ({ cert, i }) =>
         loading="lazy"
       />
       {cert.credentialUrl && (
-        <div className="absolute right-2 top-2 opacity-0 translate-y-1 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0">
+        <div className="absolute right-2 top-2 translate-y-1 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
           <a
             href={cert.credentialUrl}
             target="_blank"
@@ -48,34 +42,21 @@ const CertCard: React.FC<{ cert: TCertification; i: number }> = ({ cert, i }) =>
     </div>
 
     {/* Info */}
-    <h3 className="mt-4 text-[16px] font-bold text-white leading-snug">
+    <h3 className="mt-4 text-[16px] font-bold leading-snug text-white">
       {cert.name}
     </h3>
     <p className="text-sm text-secondary">
-      {cert.issuer}{cert.date ? ` · ${cert.date}` : ""}
+      {cert.issuer}
+      {cert.date ? ` · ${cert.date}` : ""}
     </p>
 
-    {/* ID + tombol (opsional) */}
+    {/* ID (opsional) */}
     {cert.credentialId && (
       <div className="mt-3 text-xs text-secondary">
         Credential ID: <span className="font-mono">{cert.credentialId}</span>
       </div>
     )}
-    {cert.credentialUrl && (
-      <div className="mt-4">
-        <a
-          href={cert.credentialUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-3 py-2
-                     text-sm font-medium text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-indigo-400/70"
-        >
-          <LinkIcon />
-          <span>{cert.linkLabel || "View Credential"}</span>
-        </a>
-      </div>
-    )}
-  </motion.article>
+  </article>
 );
 
 const Certification: React.FC = () => {
@@ -96,10 +77,13 @@ const Certification: React.FC = () => {
         </p>
       ) : null}
 
-      <div className="mt-10 grid grid-cols-1 gap-7 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {certifications.map((c, idx) => (
-          <CertCard key={`${c.name}-${idx}`} cert={c} i={idx} />
-        ))}
+      {/* Banner auto-scroll dengan pause saat hover */}
+      <div className="relative mt-10 w-full overflow-hidden group">
+        <div className="flex w-max gap-6 animate-scrollX group-hover:[animation-play-state:paused]">
+          {[...certifications, ...certifications].map((c, idx) => (
+            <CertCard key={`${c.name}-${idx}`} cert={c} />
+          ))}
+        </div>
       </div>
     </>
   );
