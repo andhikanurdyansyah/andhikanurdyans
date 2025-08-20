@@ -14,49 +14,45 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-        setActive("");
-      }
+      setScrolled(scrollTop > 100);
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    const navbarHighlighter = () => {
-      const sections = document.querySelectorAll("section[id]");
+    // === gunakan IntersectionObserver untuk highlight section ===
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            if (id) setActive(id);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px 0px -60% 0px", // highlight saat section lewat 40% viewport
+        threshold: 0.2,
+      }
+    );
 
-      sections.forEach((current) => {
-        const sectionId = current.getAttribute("id");
-        // @ts-ignore
-        const sectionHeight = current.offsetHeight;
-        const sectionTop =
-          current.getBoundingClientRect().top - sectionHeight * 0.2;
-
-        if (sectionTop < 0 && sectionTop + sectionHeight > 0) {
-          setActive(sectionId);
-        }
-      });
-    };
-
-    window.addEventListener("scroll", navbarHighlighter);
+    sections.forEach((sec) => observer.observe(sec));
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("scroll", navbarHighlighter);
+      observer.disconnect();
     };
   }, []);
 
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } fixed top-0 z-20 flex w-full items-center py-5 ${
+      className={`${styles.paddingX} fixed top-0 z-20 flex w-full items-center py-5 ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
+        {/* Logo */}
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -65,24 +61,26 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt="logo" className="h-9 w-9 object-contain" />
-          <p className="flex cursor-pointer text-[18px] font-bold text-white ">
+          <p className="flex cursor-pointer text-[18px] font-bold text-white">
             {config.html.title}
           </p>
         </Link>
 
+        {/* Desktop Menu */}
         <ul className="hidden list-none flex-row gap-10 sm:flex">
           {navLinks.map((nav) => (
             <li
               key={nav.id}
-              className={`${
+              className={`cursor-pointer text-[18px] font-medium ${
                 active === nav.id ? "text-white" : "text-secondary"
-              } cursor-pointer text-[18px] font-medium hover:text-white`}
+              } hover:text-white`}
             >
               <a href={`#${nav.id}`}>{nav.title}</a>
             </li>
           ))}
         </ul>
 
+        {/* Mobile Menu */}
         <div className="flex flex-1 items-center justify-end sm:hidden">
           <img
             src={toggle ? close : menu}
@@ -104,7 +102,8 @@ const Navbar = () => {
                     active === nav.id ? "text-white" : "text-secondary"
                   }`}
                   onClick={() => {
-                    setToggle(!toggle);
+                    setActive(nav.id);
+                    setToggle(false);
                   }}
                 >
                   <a href={`#${nav.id}`}>{nav.title}</a>

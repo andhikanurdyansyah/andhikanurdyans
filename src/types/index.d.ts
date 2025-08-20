@@ -12,6 +12,31 @@ export type TExperience = {
   points: string[];
 } & Required<Omit<TCommonProps, "name">>;
 
+/**
+ * ===== NEW TYPES =====
+ */
+
+export type TEducation = {
+  degree: string;        // ex: "Bachelor of Computer Science"
+  institution: string;   // ex: "Universitas Terbuka"
+  location?: string;     // ex: "Indonesia"
+  period: string;        // ex: "2021 – Present"
+  details?: string[];    // bullet points
+};
+
+export type TCertification = {
+  name: string;             // ex: "AWS Certified Cloud Practitioner"
+  issuer: string;           // ex: "Amazon Web Services"
+  date?: string;            // ex: "2024-06" atau "June 2024"
+  credentialUrl?: string;   // link ke sertifikat (Credly/Drive/dll)
+  credentialId?: string;    // optional ID sertifikat
+};
+
+/**
+ * ===== LEGACY (DEPRECATED) — boleh dihapus setelah migrasi komponen =====
+ */
+
+/** @deprecated Ganti ke TCertification */
 export type TTestimonial = {
   testimonial: string;
   designation: string;
@@ -19,6 +44,7 @@ export type TTestimonial = {
   image: string;
 } & Required<Pick<TCommonProps, "name">>;
 
+/** @deprecated Ganti ke TEducation (section/komponen berbeda) */
 export type TProject = {
   description: string;
   tags: {
@@ -28,6 +54,10 @@ export type TProject = {
   image: string;
   sourceCodeLink: string;
 } & Required<Pick<TCommonProps, "name">>;
+
+/**
+ * ===== Other unchanged types =====
+ */
 
 export type TTechnology = Required<Omit<TCommonProps, "title">>;
 
