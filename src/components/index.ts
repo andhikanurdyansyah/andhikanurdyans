@@ -18,7 +18,6 @@ import Certification from "./sections/Certification";
 
 import Contact from "./sections/Contact";
 import CanvasLoader from "./layout/Loader";
-import CertificationSection from "./sections/CertificationSection";
 
 export {
   Hero,
@@ -33,6 +32,5 @@ export {
   EarthCanvas,
   BallCanvas,
   ComputersCanvas,
-  CertificationSection,
   StarsCanvas,
 };
