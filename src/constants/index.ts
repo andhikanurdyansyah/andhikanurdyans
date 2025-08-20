@@ -10,7 +10,6 @@ import type {
 // ...import lain
 import tamhar from "../assets/edu/tamhar.png";
 import udemy from "../assets/edu/udemy.png";
-import sololearn from "../assets/edu/sololearn.png";
 import ut from "../assets/edu/ut.png";
 
 import {
