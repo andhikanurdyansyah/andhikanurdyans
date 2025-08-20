@@ -11,7 +11,7 @@ import {
   Navbar,
   Tech,
   StarsCanvas,
-  CertificationSection, // ← from barrel
+  Certification,
 } from "./components";
 
 const App = () => {
@@ -34,7 +34,7 @@ const App = () => {
         <Tech />
 
         <Education />
-        <CertificationSection />
+        <Certification />
 
         <div className="relative z-0">
           <Contact />
