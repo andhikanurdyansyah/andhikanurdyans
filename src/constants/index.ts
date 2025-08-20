@@ -206,6 +206,94 @@ const certifications: TCertification[] = [
     image: "https://placehold.co/600x400?text=KCNA",        // NEW
     linkLabel: "View Credential",
   },
+  {
+    name: "Kubernetes and Cloud Native Associate (KCNA)",
+    issuer: "CNCF",
+    date: "2023-12",
+    credentialUrl: "https://link-sertifikat-kcna.com",
+    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Kubernetes and Cloud Native Associate (KCNA)",
+    issuer: "CNCF",
+    date: "2023-12",
+    credentialUrl: "https://link-sertifikat-kcna.com",
+    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Kubernetes and Cloud Native Associate (KCNA)",
+    issuer: "CNCF",
+    date: "2023-12",
+    credentialUrl: "https://link-sertifikat-kcna.com",
+    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Kubernetes and Cloud Native Associate (KCNA)",
+    issuer: "CNCF",
+    date: "2023-12",
+    credentialUrl: "https://link-sertifikat-kcna.com",
+    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Kubernetes and Cloud Native Associate (KCNA)",
+    issuer: "CNCF",
+    date: "2023-12",
+    credentialUrl: "https://link-sertifikat-kcna.com",
+    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Kubernetes and Cloud Native Associate (KCNA)",
+    issuer: "CNCF",
+    date: "2023-12",
+    credentialUrl: "https://link-sertifikat-kcna.com",
+    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Kubernetes and Cloud Native Associate (KCNA)",
+    issuer: "CNCF",
+    date: "2023-12",
+    credentialUrl: "https://link-sertifikat-kcna.com",
+    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Kubernetes and Cloud Native Associate (KCNA)",
+    issuer: "CNCF",
+    date: "2023-12",
+    credentialUrl: "https://link-sertifikat-kcna.com",
+    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Kubernetes and Cloud Native Associate (KCNA)",
+    issuer: "CNCF",
+    date: "2023-12",
+    credentialUrl: "https://link-sertifikat-kcna.com",
+    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Kubernetes and Cloud Native Associate (KCNA)",
+    issuer: "CNCF",
+    date: "2023-12",
+    credentialUrl: "https://link-sertifikat-kcna.com",
+    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Kubernetes and Cloud Native Associate (KCNA)",
+    issuer: "CNCF",
+    date: "2023-12",
+    credentialUrl: "https://link-sertifikat-kcna.com",
+    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    linkLabel: "View Credential",
+  },
 ];
 
 export { services, technologies, experiences, educations, certifications };
