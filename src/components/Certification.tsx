@@ -1,63 +1,69 @@
-import React from "react";
-import { certifications } from "../constants";
+import { motion } from "framer-motion";
+import { SectionWrapper } from "../../hoc";
+import { certifications } from "../../constants";
+import { fadeIn } from "../../utils/motion";
+import { config } from "../../constants/config";
+import { Header } from "../atoms/Header";
+import type { TCertification } from "../../types";
 
-const Certification: React.FC = () => {
+const CertCard: React.FC<{ index: number; cert: TCertification }> = ({ index, cert }) => {
   return (
-    <section id="certification" className="py-16">
-      <div className="max-w-5xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">
-          Certification
-        </h2>
-        <p className="mt-2 text-sm opacity-80">
-          Professional certifications and credentials.
-        </p>
-
-        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {certifications.map((c, idx) => (
-            <article
-              key={idx}
-              className="p-5 bg-white dark:bg-gray-900 rounded-2xl shadow-sm ring-1 ring-black/5 hover:shadow-md transition"
-            >
-              <header className="flex items-start justify-between gap-3">
-                <div>
-                  <h3 className="text-lg font-semibold leading-snug">
-                    {c.name}
-                  </h3>
-                  <div className="text-sm opacity-80">
-                    {c.issuer}
-                    {c.date ? <span> · {c.date}</span> : null}
-                  </div>
-                </div>
-              </header>
-
-              {c.credentialId && (
-                <div className="mt-3 text-xs opacity-70">
-                  Credential ID: <span className="font-mono">{c.credentialId}</span>
-                </div>
-              )}
-
-              <footer className="mt-4">
-                {c.credentialUrl ? (
-                  <a
-                    href={c.credentialUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center rounded-xl px-3 py-2 text-sm font-medium border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800"
-                  >
-                    View Credential
-                  </a>
-                ) : (
-                  <span className="text-xs opacity-60">
-                    (No credential URL provided)
-                  </span>
-                )}
-              </footer>
-            </article>
-          ))}
-        </div>
+    <motion.article
+      variants={fadeIn("up", "spring", index * 0.2, 0.6)}
+      className="rounded-2xl bg-tertiary p-5 ring-1 ring-black/5 hover:shadow-md"
+    >
+      <h3 className="text-lg font-semibold leading-snug text-white">{cert.name}</h3>
+      <div className="text-sm text-secondary">
+        {cert.issuer}{cert.date ? ` · ${cert.date}` : ""}
       </div>
-    </section>
+
+      {cert.credentialId && (
+        <div className="mt-3 text-xs text-secondary">
+          Credential ID: <span className="font-mono">{cert.credentialId}</span>
+        </div>
+      )}
+
+      <div className="mt-4">
+        {cert.credentialUrl ? (
+          <a
+            href={cert.credentialUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center rounded-xl border border-white/20 px-3 py-2 text-sm font-medium text-white hover:bg-white/10"
+          >
+            View Credential
+          </a>
+        ) : (
+          <span className="text-xs text-secondary">(No credential URL provided)</span>
+        )}
+      </div>
+    </motion.article>
   );
 };
 
-export default Certification;
+const Certification: React.FC = () => {
+  return (
+    <>
+      <Header useMotion {...(config.sections.certification || { title: "Certification", subtitle: "", content: "" })} />
+
+      {config.sections.certification?.content ? (
+        <div className="flex w-full">
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className="mt-3 max-w-3xl text-[17px] leading-[30px] text-secondary"
+          >
+            {config.sections.certification.content}
+          </motion.p>
+        </div>
+      ) : null}
+
+      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
+        {certifications.map((c, index) => (
+          <CertCard key={`${c.name}-${index}`} index={index} cert={c} />
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default SectionWrapper(Certification, "certification");
