@@ -187,15 +187,6 @@ const educations: TEducation[] = [
     linkLabel: "View Profile",
     tags: [{ name: "self-learning", color: "pink-text-gradient" }],
   },
-  {
-    title: "Online Courses",
-    institution: "SoloLearn",
-    period: "Ongoing",
-    image: sololearn,
-    linkUrl: "https://www.sololearn.com/profile/12164800",
-    linkLabel: "View Profile",
-    tags: [{ name: "self-learning", color: "blue-text-gradient" }],
-  },
 ];
 
 const certifications: TCertification[] = [
