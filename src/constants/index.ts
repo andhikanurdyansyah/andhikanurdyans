@@ -147,7 +147,7 @@ const experiences: TExperience[] = [
 /** ===== NEW DATA ===== */
 const educations: TEducation[] = [
   {
-    degree: "Bachelor of Computer Science",
+    title: "Bachelor of Computer Science",
     institution: "Universitas Terbuka",
     location: "Indonesia",
     period: "2021 – Present",
@@ -155,7 +155,16 @@ const educations: TEducation[] = [
       "Focus on Data Analysis and Information Systems.",
       "Coursework includes Data Visualization, Systems Analysis, and Cloud Computing.",
     ],
+    // kalau tidak punya asset lokal, boleh pakai URL eksternal sementara
+    image: "https://placehold.co/600x400?text=Universitas+Terbuka",
+    linkUrl: "https://www.ut.ac.id/",
+    linkLabel: "Visit UT",
+    tags: [
+      { name: "data", color: "blue-text-gradient" },
+      { name: "cloud", color: "green-text-gradient" },
+    ],
   },
+  // tambah item lain kalau ada
 ];
 
 const certifications: TCertification[] = [

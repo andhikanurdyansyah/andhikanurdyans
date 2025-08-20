@@ -14,11 +14,21 @@ export type TExperience = {
 
 /** ===== NEW ===== */
 export type TEducation = {
-  degree: string;
+  // untuk judul kartu (mis. "Bachelor of Computer Science")
+  title: string;
+
+  // institusi (mis. "Universitas Terbuka")
   institution: string;
+
+  period: string;           // "2021 – Present"
   location?: string;
-  period: string;
-  details?: string[];
+  details?: string[];       // bullet points opsional
+
+  // ===== tambahan biar bisa kayak Projects =====
+  image?: string;           // URL/asset gambar (opsional, tapi disarankan)
+  linkUrl?: string;         // href tombol/overlay
+  linkLabel?: string;       // label tombol (default: "View")
+  tags?: { name: string; color: string }[]; // opsional kalau mau tag
 };
 
 export type TCertification = {
