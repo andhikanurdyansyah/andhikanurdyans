@@ -12,23 +12,20 @@ const LinkIcon = () => (
 );
 
 const CertCard: React.FC<{ cert: TCertification }> = ({ cert }) => (
-  <article className="w-[300px] shrink-0 rounded-2xl bg-tertiary p-5 ring-1 ring-black/5">
-    {/* IMAGE */}
-    <div className="relative h-[180px] w-full">
+  <article className="w-[280px] shrink-0 rounded-2xl bg-tertiary p-5 ring-1 ring-black/5">
+    <div className="relative h-[150px] w-full">
       <img
         src={cert.image || "https://placehold.co/600x400?text=Certification"}
         alt={cert.name}
-        className="h-full w-full rounded-2xl object-cover"
-        loading="lazy"
+        className="h-full w-full rounded-xl object-cover"
       />
       {cert.credentialUrl && (
-        <div className="card-img_hover absolute inset-0 m-3 flex justify-end">
+        <div className="absolute right-2 top-2">
           <a
             href={cert.credentialUrl}
             target="_blank"
             rel="noreferrer"
-            className="black-gradient flex h-10 w-10 items-center justify-center rounded-full text-white"
-            title={cert.linkLabel || "View Credential"}
+            className="black-gradient flex h-8 w-8 items-center justify-center rounded-full text-white"
           >
             <LinkIcon />
           </a>
@@ -36,43 +33,15 @@ const CertCard: React.FC<{ cert: TCertification }> = ({ cert }) => (
       )}
     </div>
 
-    {/* TEXT */}
-    <h3 className="mt-5 text-[18px] font-bold leading-snug text-white">
-      {cert.name}
-    </h3>
-    <div className="text-sm text-secondary">
+    <h3 className="mt-4 text-[16px] font-bold text-white">{cert.name}</h3>
+    <p className="text-sm text-secondary">
       {cert.issuer}{cert.date ? ` · ${cert.date}` : ""}
-    </div>
-
-    {/* ID */}
-    {cert.credentialId && (
-      <div className="mt-3 text-xs text-secondary">
-        Credential ID: <span className="font-mono">{cert.credentialId}</span>
-      </div>
-    )}
-
-    {/* BUTTON */}
-    <div className="mt-4">
-      {cert.credentialUrl ? (
-        <a
-          href={cert.credentialUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-3 py-2 text-sm font-medium text-white hover:bg-white/10"
-        >
-          <LinkIcon />
-          <span>{cert.linkLabel || "View Credential"}</span>
-        </a>
-      ) : (
-        <span className="text-xs text-secondary">(No credential URL provided)</span>
-      )}
-    </div>
+    </p>
   </article>
 );
 
 const Certification: React.FC = () => {
-  // duplikasi list supaya loop mulus (50% track digeser)
-  const loopItems = [...certifications, ...certifications];
+  const loopItems = [...certifications, ...certifications]; // digandakan supaya mulus
 
   return (
     <>
@@ -85,36 +54,33 @@ const Certification: React.FC = () => {
         })}
       />
 
-      {config.sections.certification?.content ? (
+      {/* teks pembuka */}
+      {config.sections.certification?.content && (
         <p className="mt-3 max-w-3xl text-[17px] leading-[30px] text-secondary">
           {config.sections.certification.content}
         </p>
-      ) : null}
+      )}
 
       {/* Banner auto-scroll */}
       <div className="mt-10 overflow-hidden">
-        {/* CSS lokal untuk animasi halus */}
         <style>{`
           @keyframes scrollX {
             0%   { transform: translateX(0); }
             100% { transform: translateX(-50%); }
           }
           .marquee-track {
-            display: flex;
-            gap: 1.5rem;                /* gap-6 */
+            display: inline-flex;
+            gap: 1rem;
             width: max-content;
+            animation: scrollX 30s linear infinite;
             will-change: transform;
-            animation: scrollX 35s linear infinite;
           }
           .marquee-container:hover .marquee-track {
-            animation-play-state: paused; /* pause saat hover */
-          }
-          @media (prefers-reduced-motion: reduce) {
-            .marquee-track { animation: none; }
+            animation-play-state: paused;
           }
         `}</style>
 
-        <div className="marquee-container">
+        <div className="marquee-container relative flex overflow-hidden">
           <div className="marquee-track">
             {loopItems.map((c, i) => (
               <CertCard key={`${c.name}-${i}`} cert={c} />
