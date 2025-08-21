@@ -13,20 +13,38 @@ import udemy from "../assets/edu/udemy.png";
 import ut from "../assets/edu/ut.png";
 
 // ...import certs
-import aws_logo from "../assets/certs/aws.png";
-import alibaba_logo from "../assets/certs/alibaba.png";
-import aviatrix_logo from "../assets/certs/aviatrix.png";
+import acsf_logo from "../assets/certs/api-connect-sales-foundation.png";
+import iact_logo from "../assets/certs/ibm-api-connect-technical-sales-intermediate.png";
+import cpfi_logo from "../assets/certs/cloud-pak-for-integration-sales-foundation.png";
+import cpf_logo from "../assets/certs/cloud-pak-for-integration-technical-sales-intermediate.png";
+import gde_logo from "../assets/certs/guardium-data-encryption-sales-foundation.png";
+import gdei_logo from "../assets/certs/guardium-data-encryption-technical-sales-intermediate.png";
+import savone_logo from "../assets/certs/sevone-sales-foundation.png";
+import savones_logo from "../assets/certs/sevone-intermediate.png";
+import acronis_logo from "../assets/certs/acronis.png";
+import dae_logo from "../assets/certs/dae.png";
+import ctm_logo from "../assets/certs/ctm.png";
+import itc_logo from "../assets/certs/itc.png";
+import ccna_logo from "../assets/certs/ccna.png";
 import fortanix_logo from "../assets/certs/fortanix.png";
-import certiprof_logo from "../assets/certs/certiprof.png";
-import coursera_logo from "../assets/certs/coursera.png";
-import cybrary_logo from "../assets/certs/cybrary.png";
+import revou_logo from "../assets/certs/revou.png";
+import alison_logo from "../assets/certs/alison.png";
 import digitalent_logo from "../assets/certs/digitalent.png";
-import forti_logo from "../assets/certs/forti.png";
-import ibm_logo from "../assets/certs/ibm.png";
+import udemy_logo from "../assets/certs/udemy.png";
+import certiprof_logo from "../assets/certs/certiprof.png";
 import icsi_logo from "../assets/certs/icsi.png";
+import forti_logo from "../assets/certs/forti.png";
+import aws_logo from "../assets/certs/aws.png";
+import oracle_logo from "../assets/certs/oracle.png";
+import alibaba_logo from "../assets/certs/alibaba.png";
 import sophos_logo from "../assets/certs/sophos.png";
-import u_logo from "../assets/certs/u.png";
-import zcnp_logo from "../assets/certs/zcnp.png";
+import zyxel_logo from "../assets/certs/zcnp.png";
+import nutanix_logo from "../assets/certs/nutanix.png";
+import microsoft_logo from "../assets/certs/microsoft.png";
+import aviatrix_logo from "../assets/certs/aviatrix.png";
+import cybrary_logo from "../assets/certs/cybrary.png";
+import sololearn_logo from "../assets/certs/sololearn.png";
+import netkrom_logo from "../assets/certs/netkrom.png";
 
 import {
   mobile, backend, creator, web,
@@ -207,19 +225,83 @@ const educations: TEducation[] = [
 
 const certifications: TCertification[] = [
   {
+    name: "API Connect Sales Foundation",
+    issuer: "IBM",
+    date: "2025-06",
+    credentialUrl: "https://drive.google.com/file/d/1jomvySqIu7cMMg0fW5TcqDmmYPo8Q0Zn/view?usp=sharing",
+    image: acsf_logo, 
+    linkLabel: "View Credential", 
+  },
+  {
+    name: "IBM API Connect Technical Sales Intermediate",
+    issuer: "IBM",
+    date: "2025-06",
+    credentialUrl: "https://drive.google.com/file/d/19T-FZ7KwAyqTjPNj_AAw2kCoWKcAoBbL/view?usp=sharing",
+    image: iact_logo, 
+    linkLabel: "View Credential", 
+  },
+  {
+    name: "Cloud Pak for Integration Sales Foundation V2",
+    issuer: "IBM",
+    date: "2025-06",
+    credentialUrl: "https://drive.google.com/file/d/1H2p4vzP4vIPuRkrYabHnQT2dnMyaX4DE/view?usp=sharing",
+    image: cpfi_logo, 
+    linkLabel: "View Credential", 
+  },
+  {
+    name: "Cloud Pak for Integration Technical Sales Intermediate",
+    issuer: "IBM",
+    date: "2025-06",
+    credentialUrl: "https://drive.google.com/file/d/1-bIsurUB44A11aaNgF_XpMLTRUF0_z4V/view?usp=sharing",
+    image: cpf_logo, 
+    linkLabel: "View Credential", 
+  },
+  {
+    name: "Guardium Data Encryption Sales Foundation",
+    issuer: "IBM",
+    date: "2025-06",
+    credentialUrl: "https://drive.google.com/file/d/16tOjIbLeVa8aSpJ_wjF1q8T1tXIJUFZb/view?usp=sharing",
+    image: gde_logo, 
+    linkLabel: "View Credential", 
+  },
+  {
+    name: "Guardium Data Encryption Technical Sales Intermediate",
+    issuer: "IBM",
+    date: "2025-06",
+    credentialUrl: "https://drive.google.com/file/d/1r3u5FQ7OxtUpIm7flKmEoo2M3xVmI3Wj/view?usp=sharing",
+    image: gdei_logo, 
+    linkLabel: "View Credential", 
+  },
+  {
+    name: "SevOne Sales Foundation",
+    issuer: "IBM",
+    date: "2025-05",
+    credentialUrl: "https://drive.google.com/file/d/1sAUsIrFu0ICGCwWWUPx1DXUYz4KpbhPr/view?usp=sharing",
+    image: savone_logo, 
+    linkLabel: "View Credential", 
+  },
+  {
+    name: "SevOne Intermediate",
+    issuer: "IBM",
+    date: "2025-05",
+    credentialUrl: "https://drive.google.com/file/d/1cacZe81I45BIBXVDXJ53H0CKOVP6D9vT/view?usp=sharing",
+    image: savones_logo, 
+    linkLabel: "View Credential", 
+  },
+  {
+    name: "Cloud Tech Fundamentals",
+    issuer: "ACRONIS",
+    date: "2024-12",
+    credentialUrl: "https://www.credly.com/badges/c4e07de0-1256-4b1f-bc6f-a627feb5e7d8/public_url",
+    image: acronis_logo, 
+    linkLabel: "View Credential", 
+  },
+  {
     name: "Data Analytics Essentials",
     issuer: "Cisco Networking Academy",
     date: "2024-03",
     credentialUrl: "https://drive.google.com/file/d/1onB4D919MXw-6RFlrs1PaOgBf0sHxfL_/view?usp=sharing",
-    image: aws_logo,     // NEW
-    linkLabel: "View Credential",                           // NEW
-  },
-  {
-    name: "Fortanix Certified Administrator",
-    issuer: "Fortanix University",
-    date: "2023-08",
-    credentialUrl: "https://drive.google.com/file/d/1LAywOwIc0MCu2PapD5xHBxC92AO6ALp5/view?usp=sharing",
-    image: aws_logo,        // NEW
+    image: dae_logo,
     linkLabel: "View Credential",
   },
   {
@@ -227,87 +309,199 @@ const certifications: TCertification[] = [
     issuer: "Cisco Networking Academy",
     date: "2023-07",
     credentialUrl: "https://drive.google.com/file/d/1LYQZKaHB3pHbTUAQoqR-AlnUrwLL5Sva/view?usp=sharing",
-    image: zcnp_logo,        // NEW
+    image: ctm_logo,
     linkLabel: "View Credential",
   },
   {
     name: "Introduction to Cybersecurity",
     issuer: "Cisco Networking Academy",
-    date: "2023-12",
+    date: "2023-07",
     credentialUrl: "https://drive.google.com/file/d/1KhQwzHBC2CCCW32XfKJevSlpsMkmTEM8/view?usp=sharing",
-    image: forti_logo,        // NEW
+    image: itc_logo,
     linkLabel: "View Credential",
   },
   {
-    name: "Kubernetes and Cloud Native Associate (KCNA)",
-    issuer: "CNCF",
-    date: "2023-12",
-    credentialUrl: "https://link-sertifikat-kcna.com",
-    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    name: "CCNA: Introduction to Networks",
+    issuer: "Cisco Networking Academy",
+    date: "2020-07",
+    credentialUrl: "https://www.credly.com/badges/61a31160-6ce8-4276-9ef3-218670691da5/public_url",
+    image: ccna_logo,
     linkLabel: "View Credential",
   },
   {
-    name: "Kubernetes and Cloud Native Associate (KCNA)",
-    issuer: "CNCF",
-    date: "2023-12",
-    credentialUrl: "https://link-sertifikat-kcna.com",
-    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    name: "Fortanix Certified Administrator",
+    issuer: "Fortanix University",
+    date: "2023-08",
+    credentialUrl: "https://drive.google.com/file/d/1LAywOwIc0MCu2PapD5xHBxC92AO6ALp5/view?usp=sharing",
+    image: fortanix_logo,
     linkLabel: "View Credential",
   },
   {
-    name: "Kubernetes and Cloud Native Associate (KCNA)",
-    issuer: "CNCF",
-    date: "2023-12",
-    credentialUrl: "https://link-sertifikat-kcna.com",
-    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    name: "Intro to Data Analytics",
+    issuer: "RevoU",
+    date: "2022-08",
+    credentialUrl: "https://drive.google.com/file/d/1LitlG8ly2BWsgH6mMjUoHbzsEyWBsFp_/view?usp=sharing",
+    image: revou_logo,
     linkLabel: "View Credential",
   },
   {
-    name: "Kubernetes and Cloud Native Associate (KCNA)",
-    issuer: "CNCF",
-    date: "2023-12",
-    credentialUrl: "https://link-sertifikat-kcna.com",
-    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    name: "PMP Project Management - Fundamental Concepts for Beginners",
+    issuer: "Alison.com",
+    date: "2023-07",
+    credentialUrl: "https://alison.com/certification/check/%242y%2410%24FTtCnOYDxzQyNKgEUkRrkepzzxJWPz1DftmpOZUKX1MzfJzYsnQe2",
+    image: alison_logo,
     linkLabel: "View Credential",
   },
   {
-    name: "Kubernetes and Cloud Native Associate (KCNA)",
-    issuer: "CNCF",
-    date: "2023-12",
-    credentialUrl: "https://link-sertifikat-kcna.com",
-    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    name: "Diploma in Project Management",
+    issuer: "Alison.com",
+    date: "2023-07",
+    credentialUrl: "https://alison.com/certification/check/%242y%2410%24C3e2Qc3J39SLNnu813HOOesHPajvUGlvjwzLt7R8mX4f4QLnTP6.W",
+    image: alison_logo,
     linkLabel: "View Credential",
   },
   {
-    name: "Kubernetes and Cloud Native Associate (KCNA)",
-    issuer: "CNCF",
-    date: "2023-12",
-    credentialUrl: "https://link-sertifikat-kcna.com",
-    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    name: "CCNA CyberSecurity Operations",
+    issuer: "Digitalent Kominfo",
+    date: "2020-07",
+    credentialUrl: "https://drive.google.com/file/d/1u6w3aQ5-xTocnkOgdlo7SzN9vkyP-Y71/view?usp=sharing",
+    image: digitalent_logo,
     linkLabel: "View Credential",
   },
   {
-    name: "Kubernetes and Cloud Native Associate (KCNA)",
-    issuer: "CNCF",
-    date: "2023-12",
-    credentialUrl: "https://link-sertifikat-kcna.com",
-    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    name: "DevOps Series : Server Automation",
+    issuer: "Udemy",
+    date: "2020-07",
+    credentialUrl: "https://drive.google.com/file/d/1tzyAGIbACiBCZIY-qmlu6DEgGnAks-MG/view?usp=sharing",
+    image: udemy_logo,
     linkLabel: "View Credential",
   },
   {
-    name: "Kubernetes and Cloud Native Associate (KCNA)",
-    issuer: "CNCF",
-    date: "2023-12",
-    credentialUrl: "https://link-sertifikat-kcna.com",
-    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    name: "Ethical Hacking Course",
+    issuer: "Udemy",
+    date: "2020-07",
+    credentialUrl: "https://drive.google.com/file/d/1tXrB8sUE68WhaMV3jDjY2SBcuNOM1iNe/view?usp=sharing",
+    image: udemy_logo,
     linkLabel: "View Credential",
   },
   {
-    name: "Kubernetes and Cloud Native Associate (KCNA)",
-    issuer: "CNCF",
-    date: "2023-12",
-    credentialUrl: "https://link-sertifikat-kcna.com",
-    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    name: "Advanced Cybersecurity Malware",
+    issuer: "Udemy",
+    date: "2020-07",
+    credentialUrl: "https://drive.google.com/file/d/1LweYv8pc4b4KDnT170tLjS1kdWlT9gGi/view?usp=sharing",
+    image: udemy_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Cyber Security Foundation",
+    issuer: "Certi Prof",
+    date: "2020-11",
+    credentialUrl: "https://drive.google.com/file/d/1tBKDqKG6YRXOSBIX6Dz-dhX10VZ3k-cR/view?usp=sharing",
+    image: certiprof_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Certified Network Security Specialist",
+    issuer: "International Cybersecurity Institute",
+    date: "2020-06",
+    credentialUrl: "https://drive.google.com/file/d/1tw0xq-oSTNY777_C8acNW4jEUHpSunyi/view?usp=sharing",
+    image: icsi_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "NSE 2 Network Security Associate",
+    issuer: "Fortinet Institute",
+    date: "2020-10",
+    credentialUrl: "https://drive.google.com/file/d/1tj2smrHbqEWucR7XN4q55dtShLeR6xN9/view?usp=sharing",
+    image: forti_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Solutions Architect - Associate",
+    issuer: "AWS Cloud",
+    date: "2019-02",
+    credentialUrl: "https://drive.google.com/file/d/1tJ-_SIG7I2hbphlQ-m2oJ_nN2p65EEkq/view?usp=sharing",
+    image: aws_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Oracle Certified Foundation Associate",
+    issuer: "Oracle Cloud",
+    date: "2022-06",
+    credentialUrl: "https://drive.google.com/file/d/16rNu9kLZxpMQvmLLkGpxRoCL-Ns1xlrp/view?usp=sharing",
+    image: oracle_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Cloud Computing Specialist",
+    issuer: "Alibaba Cloud",
+    date: "2019-11",
+    credentialUrl: "https://drive.google.com/file/d/1tNyiPM1Fjc0zV60o3S9tfAoImEIMPBS9/view?usp=sharing",
+    image: alibaba_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "ET80-XG Firewall V17.0",
+    issuer: "Sophos Certified Engineer",
+    date: "2019-04",
+    credentialUrl: "https://drive.google.com/file/d/1t_Z_Qm7ODhe9lB7oUyaQW-hTwlBxqgQP/view?usp=sharing",
+    image: sophos_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Zyxel Certified Network Professional",
+    issuer: "Zyxel Certified",
+    date: "2019-10",
+    credentialUrl: "https://drive.google.com/file/d/1tQslzkPVk8e05U_uZmT31cskQEw9O_y9/view?usp=sharing",
+    image: zyxel_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Nutanix End User Computing Administration Online",
+    issuer: "Nutanix University",
+    date: "2022-06",
+    credentialUrl: "https://drive.google.com/file/d/16QjxvVrJH-iO9-HvrVP0vHNVd1dvUtC8/view?usp=sharing",
+    image: nutanix_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Networking Fundamental",
+    issuer: "Microsoft Academy",
+    date: "2018-12",
+    credentialUrl: "https://drive.google.com/file/d/1t2NmdksMm_nhHsOiaYfuC_X9yaYWWJXS/view?usp=sharing",
+    image: microsoft_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Multi Cloud Network Associate",
+    issuer: "Aviatrix Certified Engineer",
+    date: "2020-07",
+    credentialUrl: "https://drive.google.com/file/d/1uLecpihuPO0LSlN1DUIVDLCC_8hlTyjh/view?usp=sharing",
+    image: aviatrix_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Network Device Certified",
+    issuer: "Cybrary",
+    date: "2018-12",
+    credentialUrl: "https://drive.google.com/file/d/1u4fdPpO_CS-rqxyeLMnAuN0kKUraqKSw/view?usp=sharing",
+    image: cybrary_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "HTML Fundamental",
+    issuer: "sololearn",
+    date: "2018-12",
+    credentialUrl: "https://drive.google.com/file/d/1tdSWallRatCu9vi9K7GXLoXNAd4HM7gK/view?usp=sharing",
+    image: sololearn_logo,
+    linkLabel: "View Credential",
+  },
+  {
+    name: "Secure Computer User",
+    issuer: "Netkrom",
+    date: "2018-12",
+    credentialUrl: "https://drive.google.com/file/d/1uKnTqbvJvbVRe6pIrHnvmYcq_ASnguE-/view?usp=sharing",
+    image: netkrom_logo,
     linkLabel: "View Credential",
   },
 ];
