@@ -21,10 +21,12 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('/src/assets/herobg.png')",
       },
+
+      /* === Marquee / banner scroll === */
       keyframes: {
         scrollX: {
           "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(-50%)" }, // karena konten kita gandakan 2x
         },
       },
       animation: {
