@@ -28,7 +28,7 @@ module.exports = {
         },
       },
       animation: {
-        scrollX: "scrollX 50s linear infinite",
+        scrollX: "scrollX 80s linear infinite",
       },
     },
   },
