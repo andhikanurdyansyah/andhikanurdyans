@@ -12,6 +12,22 @@ import tamhar from "../assets/edu/tamhar.png";
 import udemy from "../assets/edu/udemy.png";
 import ut from "../assets/edu/ut.png";
 
+// ...import certs
+import aws_logo from "../assets/certs/aws.png";
+import alibaba_logo from "../assets/certs/alibaba.png";
+import aviatrix_logo from "../assets/certs/aviatrix.png";
+import fortanix_logo from "../assets/certs/fortanix.png";
+import certiprof_logo from "../assets/certs/certiprof.png";
+import coursera_logo from "../assets/certs/coursera.png";
+import cybrary_logo from "../assets/certs/cybrary.png";
+import digitalent_logo from "../assets/certs/digitalent.png";
+import forti_logo from "../assets/certs/forti.png";
+import ibm_logo from "../assets/certs/ibm.png";
+import icsi_logo from "../assets/certs/icsi.png";
+import sophos_logo from "../assets/certs/sophos.png";
+import u_logo from "../assets/certs/u.png";
+import zcnp_logo from "../assets/certs/zcnp.png";
+
 import {
   mobile, backend, creator, web,
   gcp, cloudflare, aws, azure, heroku,
@@ -195,7 +211,7 @@ const certifications: TCertification[] = [
     issuer: "Cisco Networking Academy",
     date: "2024-03",
     credentialUrl: "https://drive.google.com/file/d/1onB4D919MXw-6RFlrs1PaOgBf0sHxfL_/view?usp=sharing",
-    image: "/assets/certs/aws.png",     // NEW
+    image: aws_logo,     // NEW
     linkLabel: "View Credential",                           // NEW
   },
   {
@@ -203,7 +219,7 @@ const certifications: TCertification[] = [
     issuer: "Fortanix University",
     date: "2023-08",
     credentialUrl: "https://drive.google.com/file/d/1LAywOwIc0MCu2PapD5xHBxC92AO6ALp5/view?usp=sharing",
-    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    image: aws_logo,        // NEW
     linkLabel: "View Credential",
   },
   {
@@ -211,7 +227,7 @@ const certifications: TCertification[] = [
     issuer: "Cisco Networking Academy",
     date: "2023-07",
     credentialUrl: "https://drive.google.com/file/d/1LYQZKaHB3pHbTUAQoqR-AlnUrwLL5Sva/view?usp=sharing",
-    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    image: zcnp_logo,        // NEW
     linkLabel: "View Credential",
   },
   {
@@ -219,7 +235,7 @@ const certifications: TCertification[] = [
     issuer: "Cisco Networking Academy",
     date: "2023-12",
     credentialUrl: "https://drive.google.com/file/d/1KhQwzHBC2CCCW32XfKJevSlpsMkmTEM8/view?usp=sharing",
-    image: "https://placehold.co/600x400?text=KCNA",        // NEW
+    image: forti_logo,        // NEW
     linkLabel: "View Credential",
   },
   {
