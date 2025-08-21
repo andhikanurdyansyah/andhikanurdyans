@@ -15,7 +15,7 @@ import ut from "../assets/edu/ut.png";
 // ...import certs
 import acsf_logo from "../assets/certs/api-connect-sales-foundation.png";
 import iact_logo from "../assets/certs/ibm-api-connect-technical-sales-intermediate.png";
-import cpfi_logo from "../assets/certs/cloud-pak-for-integration-sales-foundation.png";
+import cpfi_logo from "../assets/certs/cloud-pak-for-integration-sales-foundation-v2.png";
 import cpf_logo from "../assets/certs/cloud-pak-for-integration-technical-sales-intermediate.png";
 import gde_logo from "../assets/certs/guardium-data-encryption-sales-foundation.png";
 import gdei_logo from "../assets/certs/guardium-data-encryption-technical-sales-intermediate.png";
