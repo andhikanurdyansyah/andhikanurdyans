@@ -28,7 +28,9 @@ module.exports = {
         },
       },
       animation: {
-        scrollX: "scrollX 80s linear infinite",
+        "scrollX-fast": "scrollX 30s linear infinite",
+        "scrollX-normal": "scrollX 50s linear infinite",
+        "scrollX-slow": "scrollX 80s linear infinite",
       },
     },
   },
