@@ -21,7 +21,7 @@ import gde_logo from "../assets/certs/guardium-data-encryption-sales-foundation.
 import gdei_logo from "../assets/certs/guardium-data-encryption-technical-sales-intermediate.png";
 import savone_logo from "../assets/certs/sevone-sales-foundation.png";
 import savones_logo from "../assets/certs/sevone-intermediate.png";
-import acronis_logo from "../assets/certs/acronis.png";
+import acronist_logo from "../assets/certs/acronis.png";
 import dae_logo from "../assets/certs/dae.png";
 import ctm_logo from "../assets/certs/ctm.png";
 import itc_logo from "../assets/certs/itc.png";
@@ -293,7 +293,7 @@ const certifications: TCertification[] = [
     issuer: "ACRONIS",
     date: "2024-12",
     credentialUrl: "https://www.credly.com/badges/c4e07de0-1256-4b1f-bc6f-a627feb5e7d8/public_url",
-    image: acronis_logo, 
+    image: acronist_logo, 
     linkLabel: "View Credential", 
   },
   {
