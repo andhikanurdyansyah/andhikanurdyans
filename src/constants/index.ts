@@ -34,7 +34,7 @@ import udemy_logo from "../assets/certs/udemy.png";
 import certiprof_logo from "../assets/certs/certiprof.png";
 import icsi_logo from "../assets/certs/icsi.png";
 import forti_logo from "../assets/certs/forti.png";
-import aws_logo from "../assets/certs/aws.png";
+import aws_logo from "../assets/certs/coursera.png";
 import oracle_logo from "../assets/certs/oracle.png";
 import alibaba_logo from "../assets/certs/alibaba.png";
 import sophos_logo from "../assets/certs/sophos.png";
