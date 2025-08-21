@@ -4,11 +4,11 @@ import { Header } from "../atoms/Header";
 import { SectionWrapper } from "../../hoc";
 import type { TCertification } from "../../types";
 
-// Ikon link kecil
+// Ikon link kecil (tanpa dependency)
 const LinkIcon = () => (
   <svg viewBox="0 0 24 24" className="h-4 w-4" fill="currentColor" aria-hidden>
     <path d="M10.59 13.41a1 1 0 0 1 0-1.41l3-3a1 1 0 1 1 1.41 1.41l-3 3a1 1 0 0 1-1.41 0z" />
-    <path d="M13 7h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8a1 1 0 1 1 0-2z" />
+    <path d="M13 7h4a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2v-4a1 1 0 1 1 2 0v4h8V9h-4a1 1 0 1 1 0-2z" />
   </svg>
 );
 
@@ -19,11 +19,11 @@ const CertCard: React.FC<{ cert: TCertification }> = ({ cert }) => (
                hover:scale-105 hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-500/20"
   >
     {/* Gambar */}
-    <div className="relative h-[160px] w-full overflow-hidden rounded-xl">
+    <div className="relative w-full aspect-[16/9] overflow-hidden rounded-xl bg-black/20">
       <img
         src={cert.image || "https://placehold.co/600x400?text=Certification"}
         alt={cert.name}
-        className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+        className="h-full w-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
         loading="lazy"
       />
       {cert.credentialUrl && (
@@ -59,16 +59,14 @@ const CertCard: React.FC<{ cert: TCertification }> = ({ cert }) => (
 
     {/* Tombol View */}
     {cert.credentialUrl && (
-      <div className="mt-4">
-        <a
-          href={cert.credentialUrl}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-block rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-md transition hover:bg-indigo-500 hover:shadow-lg"
-        >
-          View
-        </a>
-      </div>
+      <a
+        href={cert.credentialUrl}
+        target="_blank"
+        rel="noreferrer"
+        className="mt-4 inline-block rounded-md bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow transition hover:bg-indigo-500"
+      >
+        View
+      </a>
     )}
   </article>
 );
@@ -93,7 +91,7 @@ const Certification: React.FC = () => {
 
       {/* Banner auto-scroll dengan pause saat hover */}
       <div className="relative mt-10 w-full overflow-hidden group">
-        <div className="flex w-max gap-6 animate-scrollX-slow group-hover:[animation-play-state:paused]">
+        <div className="flex w-max gap-6 animate-scrollX group-hover:[animation-play-state:paused]">
           {[...certifications, ...certifications].map((c, idx) => (
             <CertCard key={`${c.name}-${idx}`} cert={c} />
           ))}
