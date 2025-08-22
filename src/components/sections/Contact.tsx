@@ -10,7 +10,7 @@ import { Header } from "../atoms/Header";
 
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map((input) => [input, ""])
-) as Record<keyof typeof config.contact.form, string>;
+);
 
 const emailjsConfig = {
   serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -18,24 +18,26 @@ const emailjsConfig = {
   accessToken: import.meta.env.VITE_EMAILJS_ACCESS_TOKEN,
 };
 
-const Contact: React.FC = () => {
-  const formRef = useRef<HTMLFormElement | null>(null);
+const Contact = () => {
+  const formRef = useRef<React.LegacyRef<HTMLFormElement> | undefined>();
   const [form, setForm] = useState(INITIAL_STATE);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | undefined
   ) => {
+    if (e === undefined) return;
     const { name, value } = e.target;
-    setForm((s) => ({ ...s, [name]: value }));
+    setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
+    if (e === undefined) return;
     e.preventDefault();
     setLoading(true);
 
-    try {
-      await emailjs.send(
+    emailjs
+      .send(
         emailjsConfig.serviceId,
         emailjsConfig.templateId,
         {
@@ -46,82 +48,62 @@ const Contact: React.FC = () => {
           message: form.message,
         },
         emailjsConfig.accessToken
+      )
+      .then(
+        () => {
+          setLoading(false);
+          alert("Thank you. I will get back to you as soon as possible.");
+          setForm(INITIAL_STATE);
+        },
+        (error) => {
+          setLoading(false);
+          console.log(error);
+          alert("Something went wrong.");
+        }
       );
-
-      alert("Thank you. I will get back to you as soon as possible.");
-      setForm(INITIAL_STATE);
-    } catch (err) {
-      console.error(err);
-      alert("Something went wrong.");
-    } finally {
-      setLoading(false);
-    }
   };
 
   return (
-    <div className="grid items-start gap-10 xl:mt-12 xl:grid-cols-2">
-      {/* LEFT: Form + header */}
+    <div
+      className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}
+    >
       <motion.div
-        variants={slideIn("left", "tween", 0.15, 0.9)}
-        className="rounded-2xl bg-black-100/80 p-8 ring-1 ring-white/10 shadow-md"
+        variants={slideIn("left", "tween", 0.2, 1)}
+        className="bg-black-100 flex-[0.75] rounded-2xl p-8"
       >
         <Header useMotion={false} {...config.contact} />
 
         <form
+          // @ts-expect-error
           ref={formRef}
           onSubmit={handleSubmit}
-          className="mt-8 flex flex-col gap-6"
+          className="mt-12 flex flex-col gap-8"
         >
-          {/* Name */}
-          <label className="flex flex-col">
-            <span className="mb-2 text-sm font-medium text-white">
-              {config.contact.form.name.span}
-            </span>
-            <input
-              type="text"
-              name="name"
-              value={form.name}
-              onChange={handleChange}
-              placeholder={config.contact.form.name.placeholder}
-              className="rounded-lg bg-tertiary px-5 py-3 font-medium text-white outline-none ring-1 ring-white/10 placeholder:text-secondary focus:ring-2 focus:ring-indigo-500"
-            />
-          </label>
+          {Object.keys(config.contact.form).map((input) => {
+            const { span, placeholder } =
+              config.contact.form[input as keyof typeof config.contact.form];
+            const Component = input === "message" ? "textarea" : "input";
 
-          {/* Email */}
-          <label className="flex flex-col">
-            <span className="mb-2 text-sm font-medium text-white">
-              {config.contact.form.email.span}
-            </span>
-            <input
-              type="email"
-              name="email"
-              value={form.email}
-              onChange={handleChange}
-              placeholder={config.contact.form.email.placeholder}
-              className="rounded-lg bg-tertiary px-5 py-3 font-medium text-white outline-none ring-1 ring-white/10 placeholder:text-secondary focus:ring-2 focus:ring-indigo-500"
-            />
-          </label>
+            return (
+              <label key={input} className="flex flex-col">
+                <span className="mb-4 font-medium text-white">{span}</span>
+                <Component
+                  type={input === "email" ? "email" : "text"}
+                  name={input}
+                  value={form[`${input}`]}
+                  onChange={handleChange}
+                  placeholder={placeholder}
+                  className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
+                  {...(input === "message" && { rows: 7 })}
+                />
+              </label>
+            );
+          })}
 
-          {/* Message */}
-          <label className="flex flex-col">
-            <span className="mb-2 text-sm font-medium text-white">
-              {config.contact.form.message.span}
-            </span>
-            <textarea
-              rows={7}
-              name="message"
-              value={form.message}
-              onChange={handleChange}
-              placeholder={config.contact.form.message.placeholder}
-              className="resize-none rounded-lg bg-tertiary px-5 py-3 font-medium text-white outline-none ring-1 ring-white/10 placeholder:text-secondary focus:ring-2 focus:ring-indigo-500"
-            />
-          </label>
-
-          <div className="mt-2 flex flex-wrap items-center gap-4">
+          <div className="mt-4 flex gap-4">
             <button
               type="submit"
-              className="rounded-xl bg-indigo-600 px-6 py-3 font-bold text-white shadow-md transition-transform duration-300 hover:scale-[1.03] hover:bg-indigo-500 disabled:opacity-60"
-              disabled={loading}
+              className="bg-tertiary shadow-primary rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none hover:scale-105 transition-transform duration-300"
             >
               {loading ? "Sending..." : "Send"}
             </button>
@@ -130,7 +112,7 @@ const Contact: React.FC = () => {
               href="https://drive.google.com/file/d/1otHMTcDRsM4AxoPi4XqMn2_2SEivh_J6/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl bg-black/40 px-6 py-3 font-bold text-white ring-1 ring-white/10 transition-all duration-300 hover:scale-[1.03] hover:bg-black/50"
+              className="animate-pulse inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-[#7F00FF] to-[#E100FF] px-6 py-3 font-bold text-white shadow-lg transition-all duration-300 hover:scale-105"
             >
               <span>Download CV</span>
               <svg
@@ -141,25 +123,22 @@ const Contact: React.FC = () => {
                 stroke="currentColor"
                 strokeWidth={2}
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 13l-5 5m0 0l-5-5m5 5V6"
+                />
               </svg>
             </a>
-
-            <span className="ml-auto text-xs text-secondary">
-              I typically reply within <span className="text-white/90">24 hours</span>.
-            </span>
           </div>
         </form>
       </motion.div>
 
-      {/* RIGHT: Earth (animasi tetap), sticky di desktop biar sejajar */}
       <motion.div
-        variants={slideIn("right", "tween", 0.15, 0.9)}
-        className="xl:sticky xl:top-24"
+        variants={slideIn("right", "tween", 0.2, 1)}
+        className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
       >
-        <div className="h-[340px] md:h-[520px] xl:h-[560px] overflow-hidden rounded-2xl ring-1 ring-white/10 shadow-md">
-          <EarthCanvas />
-        </div>
+        <EarthCanvas />
       </motion.div>
     </div>
   );
