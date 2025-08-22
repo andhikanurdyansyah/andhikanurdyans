@@ -34,40 +34,39 @@ const Contact: React.FC = () => {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    // validasi very-light
-    if (!form.name?.trim() || !form.email?.trim() || !form.message?.trim()) {
-      alert("Please fill your name, email, and message.");
-      return;
-    }
+  if (!form.name?.trim() || !form.email?.trim() || !form.message?.trim()) {
+    alert("Please fill your name, email, and message.");
+    return;
+  }
 
-    setLoading(true);
+  setLoading(true);
+  const now = new Date();
+  const submitted_at = now.toLocaleString();
+  const year = String(now.getFullYear());
 
-    const now = new Date();
-    const submitted_at = now.toLocaleString();
-    const year = String(now.getFullYear());
+  try {
+    // 1) Send to you (admin)
+    await emailjs.send(
+      emailjsConfig.serviceId,
+      emailjsConfig.templateId,
+      {
+        form_name: form.name,
+        to_name: config.html.fullName,
+        from_email: form.email,
+        to_email: config.html.email,
+        message: form.message,
+        reply_to: form.email,
+        submitted_at,
+        year,
+      },
+      emailjsConfig.accessToken
+    );
 
+    // 2) Try auto-reply (non-blocking)
     try {
-      // 1) Kirim ke kamu (ADMIN)
-      await emailjs.send(
-        emailjsConfig.serviceId,
-        emailjsConfig.templateId,
-        {
-          form_name: form.name,
-          to_name: config.html.fullName,
-          from_email: form.email,
-          to_email: config.html.email,
-          message: form.message,
-          reply_to: form.email, // balas langsung ke pengirim
-          submitted_at,
-          year,
-        },
-        emailjsConfig.accessToken
-      );
-
-      // 2) Kirim auto-reply ke pengirim (USER)
       await emailjs.send(
         emailjsConfig.serviceId,
         emailjsConfig.autoReplyTemplateId,
@@ -78,22 +77,27 @@ const Contact: React.FC = () => {
           year,
           owner_email: config.html.email,
           portfolio_url: "https://andhikanurdyans.vercel.app",
-          to_name: form.name,  // opsional kalau dipakai di template
-          to_email: form.email // opsional, hanya sebagai info
+          to_name: form.name,
+          to_email: form.email, // <- MUST match your template's "To email": {{to_email}}
         },
         emailjsConfig.accessToken
       );
-
-      alert("✅ Message sent! A copy has been emailed to you.");
-      setForm(INITIAL_STATE);
-      formRef.current?.reset();
-    } catch (error) {
-      console.error("EmailJS error:", error);
-      alert("❌ Failed to send message. Please try again later.");
-    } finally {
-      setLoading(false);
+    } catch (autoErr) {
+      console.error("Auto-reply failed:", autoErr);
+      // Optional: show a soft warning instead of failing
+      // alert("Message sent, but the copy to your inbox couldn't be delivered.");
     }
-  };
+
+    alert("✅ Message sent! If you included a valid email, a copy should be in your inbox.");
+    setForm(INITIAL_STATE);
+  } catch (err) {
+    console.error("Admin send failed:", err);
+    alert("❌ Failed to send message. Please try again later.");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <div className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}>
