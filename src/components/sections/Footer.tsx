@@ -15,7 +15,7 @@ const Footer = () => {
         </a>
 
         <a
-          href="https://wa.me/6281234567890"
+          href="https://wa.me/6285788883297?text=Hi%20Andhika!"
           target="_blank"
           rel="noopener noreferrer"
           className="transition-transform hover:scale-110 hover:text-white"
@@ -25,7 +25,7 @@ const Footer = () => {
         </a>
 
         <a
-          href="https://www.linkedin.com/in/andhikanurdyansyah/"
+          href="https://id.linkedin.com/in/andhika-nurdyansyah-b404a0148"
           target="_blank"
           rel="noopener noreferrer"
           className="transition-transform hover:scale-110 hover:text-white"
