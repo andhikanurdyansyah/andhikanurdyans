@@ -12,6 +12,7 @@ import {
   Tech,
   StarsCanvas,
   Certification,
+  Footer,   // ⬅️ tambahin ini
 } from "./components";
 
 const App = () => {
@@ -40,6 +41,9 @@ const App = () => {
           <Contact />
           <StarsCanvas />
         </div>
+
+        {/* Footer */}
+        <Footer />
       </div>
     </BrowserRouter>
   );
