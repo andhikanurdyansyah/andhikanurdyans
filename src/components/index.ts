@@ -15,6 +15,7 @@ import Experience from "./sections/Experience";
 // NEW: ganti Works & Feedbacks
 import Education from "./sections/Education";
 import Certification from "./sections/Certification";
+import Footer from "./sections/Footer";
 
 import Contact from "./sections/Contact";
 import CanvasLoader from "./layout/Loader";
@@ -33,4 +34,5 @@ export {
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
+  Footer,        // NEW
 };
