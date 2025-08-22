@@ -67,7 +67,6 @@ const Contact = () => {
     <div
       className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}
     >
-      {/* FORM */}
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="bg-black-100 flex-[0.75] rounded-2xl p-8"
@@ -133,44 +132,8 @@ const Contact = () => {
             </a>
           </div>
         </form>
-
-        {/* FOOTER CONTACT INFO */}
-        <div className="mt-10 border-t border-gray-700 pt-6 text-sm text-gray-400 space-y-2">
-          <p>
-            📧 Email:{" "}
-            <a
-              href="mailto:andhikanrdyansyah@gmail.com"
-              className="text-white hover:text-purple-400 transition-colors"
-            >
-              andhikanrdyansyah@gmail.com
-            </a>
-          </p>
-          <p>
-            💼 LinkedIn:{" "}
-            <a
-              href="https://linkedin.com/in/andhikanurdyansyah"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-purple-400 transition-colors"
-            >
-              linkedin.com/in/andhikanurdyansyah
-            </a>
-          </p>
-          <p>
-            📱 WhatsApp:{" "}
-            <a
-              href="https://wa.me/6285788883297"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white hover:text-purple-400 transition-colors"
-            >
-              +62 812-3456-7890
-            </a>
-          </p>
-        </div>
       </motion.div>
 
-      {/* EARTH ANIMATION */}
       <motion.div
         variants={slideIn("right", "tween", 0.2, 1)}
         className="h-[350px] md:h-[550px] xl:h-auto xl:flex-1"
