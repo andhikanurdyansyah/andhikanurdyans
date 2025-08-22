@@ -8,36 +8,50 @@ import { slideIn } from "../../utils/motion";
 import { config } from "../../constants/config";
 import { Header } from "../atoms/Header";
 
+// --- state awal form mengikuti config.contact.form ---
 const INITIAL_STATE = Object.fromEntries(
   Object.keys(config.contact.form).map((input) => [input, ""])
-);
+) as Record<string, string>;
 
+// --- EmailJS env (ADMIN TEMPLATE pakai VITE_EMAILJS_TEMPLATE_ID) ---
 const emailjsConfig = {
-  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID,
-  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-  accessToken: import.meta.env.VITE_EMAILJS_ACCESS_TOKEN,
+  serviceId: import.meta.env.VITE_EMAILJS_SERVICE_ID as string,
+  templateId: import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string, // admin
+  accessToken: import.meta.env.VITE_EMAILJS_ACCESS_TOKEN as string,
+  autoReplyTemplateId: import.meta.env
+    .VITE_EMAILJS_TEMPLATE_ID_AUTOREPLY as string, // auto-reply
 };
 
-const Contact = () => {
-  const formRef = useRef<React.LegacyRef<HTMLFormElement> | undefined>();
+const Contact: React.FC = () => {
+  const formRef = useRef<HTMLFormElement | null>(null);
   const [form, setForm] = useState(INITIAL_STATE);
   const [loading, setLoading] = useState(false);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement> | undefined
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    if (e === undefined) return;
     const { name, value } = e.target;
-    setForm({ ...form, [name]: value });
+    setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement> | undefined) => {
-    if (e === undefined) return;
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // validasi very-light
+    if (!form.name?.trim() || !form.email?.trim() || !form.message?.trim()) {
+      alert("Please fill your name, email, and message.");
+      return;
+    }
+
     setLoading(true);
 
-    emailjs
-      .send(
+    const now = new Date();
+    const submitted_at = now.toLocaleString();
+    const year = String(now.getFullYear());
+
+    try {
+      // 1) Kirim ke kamu (ADMIN)
+      await emailjs.send(
         emailjsConfig.serviceId,
         emailjsConfig.templateId,
         {
@@ -46,27 +60,43 @@ const Contact = () => {
           from_email: form.email,
           to_email: config.html.email,
           message: form.message,
+          reply_to: form.email, // balas langsung ke pengirim
+          submitted_at,
+          year,
         },
         emailjsConfig.accessToken
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-          setForm(INITIAL_STATE);
-        },
-        (error) => {
-          setLoading(false);
-          console.log(error);
-          alert("Something went wrong.");
-        }
       );
+
+      // 2) Kirim auto-reply ke pengirim (USER)
+      await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.autoReplyTemplateId,
+        {
+          form_name: form.name,
+          message: form.message,
+          submitted_at,
+          year,
+          owner_email: config.html.email,
+          portfolio_url: "https://andhikanurdyans.vercel.app",
+          to_name: form.name,  // opsional kalau dipakai di template
+          to_email: form.email // opsional, hanya sebagai info
+        },
+        emailjsConfig.accessToken
+      );
+
+      alert("✅ Message sent! A copy has been emailed to you.");
+      setForm(INITIAL_STATE);
+      formRef.current?.reset();
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      alert("❌ Failed to send message. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
-    <div
-      className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}
-    >
+    <div className={`flex flex-col-reverse gap-10 overflow-hidden xl:mt-12 xl:flex-row`}>
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
         className="bg-black-100 flex-[0.75] rounded-2xl p-8"
@@ -74,27 +104,30 @@ const Contact = () => {
         <Header useMotion={false} {...config.contact} />
 
         <form
-          // @ts-expect-error
           ref={formRef}
           onSubmit={handleSubmit}
           className="mt-12 flex flex-col gap-8"
+          noValidate
         >
           {Object.keys(config.contact.form).map((input) => {
             const { span, placeholder } =
               config.contact.form[input as keyof typeof config.contact.form];
-            const Component = input === "message" ? "textarea" : "input";
+            const isMessage = input === "message";
+            const isEmail = input === "email";
+            const Component: any = isMessage ? "textarea" : "input";
 
             return (
               <label key={input} className="flex flex-col">
                 <span className="mb-4 font-medium text-white">{span}</span>
                 <Component
-                  type={input === "email" ? "email" : "text"}
+                  type={isEmail ? "email" : "text"}
                   name={input}
-                  value={form[`${input}`]}
+                  defaultValue={form[input] ?? ""}
                   onChange={handleChange}
                   placeholder={placeholder}
                   className="bg-tertiary placeholder:text-secondary rounded-lg border-none px-6 py-4 font-medium text-white outline-none"
-                  {...(input === "message" && { rows: 7 })}
+                  {...(isMessage && { rows: 7 })}
+                  required
                 />
               </label>
             );
@@ -103,7 +136,8 @@ const Contact = () => {
           <div className="mt-4 flex gap-4">
             <button
               type="submit"
-              className="bg-tertiary shadow-primary rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none hover:scale-105 transition-transform duration-300"
+              disabled={loading}
+              className="bg-tertiary shadow-primary rounded-xl px-8 py-3 font-bold text-white shadow-md outline-none transition-transform duration-300 hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {loading ? "Sending..." : "Send"}
             </button>
@@ -123,11 +157,7 @@ const Contact = () => {
                 stroke="currentColor"
                 strokeWidth={2}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M17 13l-5 5m0 0l-5-5m5 5V6"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 13l-5 5m0 0l-5-5m5 5V6" />
               </svg>
             </a>
           </div>
