@@ -131,6 +131,35 @@ const Contact = () => {
               </svg>
             </a>
           </div>
+            {/* Ikon social media */}
+  <div className="flex gap-6 justify-start">
+    <a
+      href="mailto:youremail@example.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:scale-110 transition-transform duration-300"
+    >
+      <img src="/icons/email.svg" alt="Email" className="w-6 h-6" />
+    </a>
+
+    <a
+      href="https://wa.me/6281234567890"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:scale-110 transition-transform duration-300"
+    >
+      <img src="/icons/whatsapp.svg" alt="WhatsApp" className="w-6 h-6" />
+    </a>
+
+    <a
+      href="https://linkedin.com/in/username"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="hover:scale-110 transition-transform duration-300"
+    >
+      <img src="/icons/linkedin.svg" alt="LinkedIn" className="w-6 h-6" />
+    </a>
+  </div>
         </form>
       </motion.div>
 
