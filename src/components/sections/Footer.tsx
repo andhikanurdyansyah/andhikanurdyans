@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Phone } from "lucide-react";
+import { Mail, Linkedin, Phone, Github, Instagram, Facebook, Twitter } from "lucide-react";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -25,13 +25,53 @@ const Footer = () => {
         </a>
 
         <a
-          href="https://id.linkedin.com/in/andhika-nurdyansyah-b404a0148"
+          href="https://www.linkedin.com/in/andhikanurdyansyah/"
           target="_blank"
           rel="noopener noreferrer"
           className="transition-transform hover:scale-110 hover:text-white"
           aria-label="LinkedIn"
         >
           <Linkedin className="h-6 w-6" />
+        </a>
+
+        <a
+          href="https://github.com/andhikanurdyansyah"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-transform hover:scale-110 hover:text-white"
+          aria-label="GitHub"
+        >
+          <Github className="h-6 w-6" />
+        </a>
+
+        <a
+          href="https://www.instagram.com/andhikanurdyansyah/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-transform hover:scale-110 hover:text-white"
+          aria-label="Instagram"
+        >
+          <Instagram className="h-6 w-6" />
+        </a>
+
+        <a
+          href="https://www.facebook.com/andhika.nurdyansyah/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-transform hover:scale-110 hover:text-white"
+          aria-label="Facebook"
+        >
+          <Facebook className="h-6 w-6" />
+        </a>
+
+        <a
+          href="https://x.com/andhikanurdyans"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-transform hover:scale-110 hover:text-white"
+          aria-label="Twitter"
+        >
+          <Twitter className="h-6 w-6" />
         </a>
       </div>
 
