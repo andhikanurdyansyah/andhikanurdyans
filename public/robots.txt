@@ -1,5 +1,19 @@
 # https://www.robotstxt.org/robotstxt.html
+# Andhika Nurdyansyah Portfolio - SEO Optimized
+
 User-agent: *
 Allow: /
+Allow: /src/assets/
 
+# Sitemaps
 Sitemap: https://andhikanurdyansyah.vercel.app/sitemap.xml
+
+# Crawl-delay for better indexing
+Crawl-delay: 1
+
+# Block specific bots if needed (optional)
+User-agent: AhrefsBot
+Crawl-delay: 2
+
+User-agent: SemrushBot
+Crawl-delay: 2

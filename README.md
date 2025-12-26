@@ -1,33 +1,63 @@
-# 3D Portfolio
+# Andhika Nurdyansyah - 3D Portfolio
 
-<!-- GitHub badges -->
+<!-- Professional Portfolio -->
 
-[![Latest release](https://img.shields.io/github/v/release/ladunjexa/reactjs18-3d-portfolio?label=Latest%20release&style=social)](https://github.com/ladunjexa/reactjs18-3d-portfolio/releases/tag/v0.1.0)
-[![Stars](https://img.shields.io/github/stars/ladunjexa/reactjs18-3d-portfolio?style=social)](https://github.com/ladunjexa/reactjs18-3d-portfolio/stargazers)
-[![Fork](https://img.shields.io/github/forks/ladunjexa/reactjs18-3d-portfolio?style=social)](https://github.com/ladunjexa/reactjs18-3d-portfolio/forks)
-[![GitHub commits](https://img.shields.io/github/commit-activity/t/ladunjexa/reactjs18-3d-portfolio?style=social&logo=github)](https://github.com/ladunjexa/reactjs18-3d-portfolio/commits)
-[![Pull requests](https://img.shields.io/github/issues-pr/ladunjexa/reactjs18-3d-portfolio?style=social&logo=github)](https://github.com/ladunjexa/reactjs18-3d-portfolio/pulls)
+![Portfolio Preview](.github/README_ASSETS/3d-portfolio.png)
 
-![demo](.github/README_ASSETS/3d-portfolio.png)
+## 👨‍💻 About Me
 
-[![ladunjexa](https://custom-icon-badges.demolab.com/badge/made%20by%20-ladunjexa-556bf2?logo=github&logoColor=white&labelColor=101827)](https://github.com/luadnjexa)
-[![License](https://img.shields.io/github/license/ladunjexa/reactjs18-3d-portfolio?color=dddddd&labelColor=000000)](https://github.com/ladunjexa/reactjs18-3d-portfolio/blob/main/LICENSE)
-[![Top Language](https://img.shields.io/github/languages/top/ladunjexa/reactjs18-3d-portfolio?logo=github&logoColor=%23007ACC&label=TypeScript)](https://www.typescriptlang.org/)
-[![Contributors](https://img.shields.io/github/contributors/ladunjexa/reactjs18-3d-portfolio?style=flat&color=orange&label=Contributors)](https://github.com/ladunjexa/reactjs18-3d-portfolio/graphs/contributors)
-![Release](https://img.shields.io/github/release/ladunjexa/reactjs18-3d-portfolio.svg)
-![PRs](https://img.shields.io/badge/PRs-welcome-ff69b4.svg?style=shields)
-![deployment](https://img.shields.io/github/deployments/ladunjexa/reactjs18-3d-portfolio/Production?logo=vercel&label=Website)
-[![Known Vulnerabilities](https://snyk.io/test/github/ladunjexa/reactjs18-3d-portfolio/badge.svg)](https://snyk.io/test/github/ladunjexa/reactjs18-3d-portfolio)
+**Andhika Nurdyansyah** - Senior Technical Consultant specializing in DevOps, Cloud-Native Architecture, Network Security, and API Gateway solutions.
+
+### 🔗 Connect With Me
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Andhika%20Nurdyansyah-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/andhikanurdyansyah)
+[![GitHub](https://img.shields.io/badge/GitHub-andhikanurdyansyah-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/andhikanurdyansyah)
+[![Email](https://img.shields.io/badge/Email-andhikanurdyansyah@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:andhikanurdyansyah@gmail.com)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-915EFF?style=for-the-badge&logo=vercel&logoColor=white)](https://andhikanurdyansyah.vercel.app)
+
+### 💼 Professional Profile
+
+- 🏢 **Current Role**: Senior Technical Consultant at PT Platinumetrix Global Inovasi
+- 🎯 **Expertise**: DevOps | AWS EKS | Cloud-Native | Network Security | IBM API Connect
+- 🌐 **Portfolio**: [andhikanurdyansyah.vercel.app](https://andhikanurdyansyah.vercel.app)
+- 📧 **Contact**: andhikanurdyansyah@gmail.com
+- 🔗 **LinkedIn**: [linkedin.com/in/andhikanurdyansyah](https://linkedin.com/in/andhikanurdyansyah)
+- 💻 **GitHub**: [github.com/andhikanurdyansyah](https://github.com/andhikanurdyansyah)
 
 ## 🌐 Live Demo
 
-Explore the live demonstration of the project:
-[reactjs18-3d-portfolio](https://reactjs18-3-d-portfolio.vercel.app/)
+**Explore My Professional Portfolio**: [andhikanurdyansyah.vercel.app](https://andhikanurdyansyah.vercel.app/)
 
 ## 📝 Description
 
-**3D Portfolio** is a well-designed and fully functional portfolio website that is built with
-React.js and Three.js. It is a fully responsive website that works well on all devices.
+**Andhika Nurdyansyah's 3D Portfolio** - A modern, interactive portfolio website showcasing my expertise in DevOps, Cloud-Native Solutions, and Network Security. Built with cutting-edge technologies like React.js and Three.js for an immersive 3D experience.
+
+### 🚀 Key Features
+
+- 🎨 **Interactive 3D Graphics** powered by Three.js
+- 📱 **Fully Responsive Design** optimized for all devices
+- ⚡ **High Performance** with Vite build tool
+- 🎯 **SEO Optimized** for maximum visibility
+- 🌟 **Modern Tech Stack** using React 18 & TypeScript
+
+### 🛠️ Technologies & Expertise
+
+#### Cloud & DevOps
+- **AWS Services**: EKS, EC2, S3, Lambda, CloudFormation
+- **Container Orchestration**: Kubernetes, Docker, Helm
+- **CI/CD**: Jenkins, GitLab CI, GitHub Actions, ArgoCD
+- **Infrastructure as Code**: Terraform, Ansible
+
+#### Network & Security
+- **API Gateway**: IBM API Connect, Kong, AWS API Gateway
+- **Network Security**: Firewall, VPN, Load Balancing
+- **Monitoring**: Prometheus, Grafana, ELK Stack
+- **Security Tools**: Vault, SSL/TLS, Security Scanning
+
+#### Development
+- **Languages**: TypeScript, JavaScript, Python, Bash
+- **Frameworks**: React, Node.js, Express
+- **Tools**: Git, VS Code, Docker Compose
 
 <details><summary><b>Folder Structure</b></summary>
 

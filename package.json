@@ -1,14 +1,43 @@
 {
-  "name": "threejs-3d-portfolio",
+  "name": "andhikanurdyansyah-portfolio",
+  "description": "Professional 3D portfolio of Andhika Nurdyansyah - Senior Technical Consultant specializing in DevOps, Cloud-Native Architecture, and Network Security",
+  "version": "2.0.0",
+  "author": {
+    "name": "Andhika Nurdyansyah",
+    "email": "andhikanurdyansyah@gmail.com",
+    "url": "https://andhikanurdyansyah.vercel.app"
+  },
+  "homepage": "https://andhikanurdyansyah.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andhikanurdyansyah/andhikanurdyans"
+  },
+  "keywords": [
+    "portfolio",
+    "andhika-nurdyansyah",
+    "devops",
+    "cloud-engineer",
+    "aws",
+    "kubernetes",
+    "three.js",
+    "react",
+    "typescript",
+    "3d-portfolio",
+    "technical-consultant",
+    "network-security",
+    "cloud-native"
+  ],
+  "license": "MIT",
   "private": true,
-  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "ts:check": "tsc --noEmit"
+    "ts:check": "tsc --noEmit",
+    "seo:verify": "echo Verifying SEO files... && type public\\sitemap.xml && type public\\robots.txt && type public\\humans.txt",
+    "seo:check": "echo SEO Checklist - See SEO-CHECKLIST.md for full guide"
   },
   "dependencies": {
     "@emailjs/browser": "^3.12.1",

@@ -1,0 +1,21 @@
+{
+  "name": "Andhika Nurdyansyah",
+  "short_name": "Andhika N",
+  "description": "Professional portfolio of Andhika Nurdyansyah - Senior Technical Consultant specializing in DevOps, Cloud-Native Architecture, and Network Security",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050816",
+  "theme_color": "#915EFF",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "technology", "devops", "cloud"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

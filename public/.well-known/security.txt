@@ -1,0 +1,6 @@
+Contact: mailto:andhikanurdyansyah@gmail.com
+Preferred-Languages: en, id
+Canonical: https://andhikanurdyansyah.vercel.app/.well-known/security.txt
+Policy: https://andhikanurdyansyah.vercel.app
+Acknowledgments: https://andhikanurdyansyah.vercel.app
+Hiring: https://linkedin.com/in/andhikanurdyansyah

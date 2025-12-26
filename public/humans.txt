@@ -1,0 +1,31 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Name: Andhika Nurdyansyah
+    Role: Senior Technical Consultant | DevOps & Cloud-Native Engineer
+    Location: Indonesia
+    Email: andhikanurdyansyah@gmail.com
+    LinkedIn: https://linkedin.com/in/andhikanurdyansyah
+    GitHub: https://github.com/andhikanurdyansyah
+    Website: https://andhikanurdyansyah.vercel.app
+
+# THANKS
+
+    To all the open-source contributors and the tech community
+
+# TECHNOLOGY COLOPHON
+
+    Languages: TypeScript, JavaScript, Python, Bash
+    Frameworks: React, Three.js, Framer Motion
+    Tools: Vite, Tailwind CSS
+    Infrastructure: Vercel, AWS, Kubernetes, Docker
+    Specialization: DevOps, Cloud-Native, Network Security, API Gateway
+
+# SITE
+
+    Last update: 2025-12-26
+    Standards: HTML5, CSS3, ES6+
+    Components: React 18, TypeScript 5
+    IDE: Visual Studio Code
