@@ -47,7 +47,7 @@ export const config: TConfig = {
   hero: {
     name: "Andhika Nurdyansyah",
     p: [
-      "Sr Technical Consultant | DevOps | Network & Security | Cloud-Native Solutions | Passionate Tech Problem Solver",
+      "Infrastructure & Solutions Architecture Lead | Driving Secure, Cloud-Native Enterprise Systems",
     ],
   },
   contact: {
@@ -69,9 +69,8 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `Crafting resilient solutions across DevOps, Network Security, and Cloud-Native systems. 
-      I thrive on solving complex tech puzzles, optimizing infrastructure, and building secure, scalable platforms. Always learning,
-      always improving—engineering with purpose!.`,
+      content: `Leading enterprise infrastructure and cloud-native architecture initiatives with a strong focus on security, scalability, and operational resilience.
+I bridge technology and business strategy—designing sustainable systems that drive performance, reliability, and long-term digital growth.`,
     },
     experience: {
       p: "What I have done so far",

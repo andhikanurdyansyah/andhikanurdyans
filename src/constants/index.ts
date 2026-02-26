@@ -62,10 +62,10 @@ export const navLinks: TNavLink[] = [
 ];
 
 const services: TService[] = [
-  { title: "Project Management", icon: web },
-  { title: "DevOps", icon: mobile },
-  { title: "Network & Security", icon: backend },
-  { title: "Cloud Infra-Architecture", icon: creator },
+  { title: "Infrastructure Architecture", icon: web },
+  { title: "Cloud-Native Platforms", icon: mobile },
+  { title: "Enterprise Network & Security", icon: backend },
+  { title: "Technology Leadership & Governance", icon: creator },
 ];
 
 const technologies: TTechnology[] = [
@@ -86,18 +86,17 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: "Project Manager",
+    title: "Technical Lead – Infrastructure & Solutions Architecture",
     companyName: "PT. Platinumetrix Global Inovasi",
     companyUrl: "https://pgi-data.co.id",
     icon: pgi, iconBg: "#383E56", date: "July 2022 - Present",
     points: [
-      "Privilege Access Management (PAM): Successfully led the deployment of ARCON PAM for enterprise clients, improving access governance and regulatory compliance.",
-      "Zero Trust Security: Implemented Block Armour ZTNA (Zero Trust Network Access) in PT. Smartfren Tbk, strengthening network security and minimizing insider threats.",
-      "Custom Applications (GoMamam): Spearheaded the design and development of custom business applications tailored for GoMamam, from requirements gathering to delivery.",
-      "API Management (MNC Bank): Managed enterprise-level API lifecycle management implementation using IBM API Connect, enabling secure integration and scaling of financial services.",
-      "Coordinated cross-functional teams (developers, infrastructure engineers, and business stakeholders) to deliver projects on time and within budget.",
-      "Oversaw end-to-end project lifecycle: requirement analysis, architecture design, vendor management, UAT, deployment, and post-go-live support.",
-      "Delivered multiple successful projects across sectors (telecommunication, fintech, banking, and retail), ensuring client satisfaction and long-term partnerships.",
+      "Led end-to-end infrastructure and solution architecture delivery for enterprise clients, including MNC Bank (Financial Services), Smartfren (Telecommunication), and Gomamam (Digital Platform).",
+      "Architected secure API ecosystem using IBM API Connect for MNC Bank, enabling governed API exposure and secure partner integration.",
+      "Designed and implemented Zero Trust Network Access (ZTNA) and Privileged Access Management (ARCON PAM) solutions for enterprise-grade security environments.",
+      "Defined network segmentation, integration patterns, and high-availability deployment topology for telecommunication and fintech sectors.",
+      "Acted as technical authority in solution planning, vendor alignment, and cross-functional engineering coordination.",
+      "Oversaw full project lifecycle from architecture blueprinting to production deployment and optimization.",
     ],
   },
   {
